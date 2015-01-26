@@ -3,10 +3,12 @@
 <ul>
 <% @posts.each do |post| %>
 	<li>
-		<%= post.title %>
+		<%= link_to post.title, edit_post_path(post) %>
 	</li>
 
 <% end %>
 </ul>
 
+
+<%= link_to "create post", new_post_path %> 
 <%= link_to "RSS posts", posts_path(format: 'rss') %> 
