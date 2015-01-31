@@ -1,9 +1,11 @@
 <%= form_for(@post) do |f| %>
 	<%= f.label :title, "Titre" %>
+	<br>
 	<%= f.text_field(:title, size: 20) %>
-
+	<br><br>
 	<%= f.label :content, "Texte" %>
+	<br>
 	<%= f.text_area(:content) %>
-
-	<%= f.submit  %>
+	<br><br>
+	<%= f.submit %>
 <% end %>
