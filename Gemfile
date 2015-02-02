@@ -29,3 +29,5 @@ gem 'spring',        group: :development
 group :development, :test do
   gem 'dotenv'
 end
+
+gem 'rails_12factor', group: :production

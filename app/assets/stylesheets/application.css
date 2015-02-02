@@ -18,16 +18,16 @@ body {
 display: block;
 margin: 0
 }
-menu {
+.menu {
 	padding: 0;
 	margin: 0;
 	text-align:center;
 }
-menu li {
+.menu li {
 	display: inline;
 	list-style: none; /* pour IE7 */
 }
-menu {
+.menu {
 	border: 1px solid #333;
 	border-top-color: #707070;
 	background-color: #5E5E5E;
@@ -45,7 +45,7 @@ menu {
 	-moz-border-radius: 6px;
 	border-radius: 6px;
 }
-menu a {
+.menu a {
 	display:inline-block;
 	height: 36px;
 	margin:0;
@@ -59,14 +59,14 @@ menu a {
 	font-family: Helvetica, Arial, Verdana, sans-serif;
 	font-size: 1em;
 }
-menu :first-child a {
+.menu :first-child a {
 	border-left: 0;
 }
-menu :last-child a {
+.menu :last-child a {
 	border-right: 0;
 }
-menu a:hover,
-menu a:focus {
+.menu a:hover,
+.menu a:focus {
 	background-color: #3E3E3E;
 	background: -moz-linear-gradient(bottom , #444444 0pt, #3E3E3E 50%, #505050 51%, #606060 100%) repeat scroll 0 0 transparent;
 	background: -webkit-linear-gradient(bottom , #444444 0pt, #3E3E3E 50%, #505050 51%, #606060 100%) repeat scroll 0 0 transparent;
