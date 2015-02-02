@@ -48,7 +48,7 @@ margin: 0
 .menu a {
 	display:inline-block;
 	height: 36px;
-	margin:0;
+	margin:-2px;
 	padding: 0 35px;
 	line-height: 36px;
 	border-left: 1px solid #555;
