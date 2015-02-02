@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Mali Info</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
-<%= yield %>
+<head>
+	<title>Mali Info</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+
+<body>
+	<menu>
+		<li><a href="#">Accueil</a></li>
+		<li><a href="#">Politique</a></li>
+		<li><a href="#">Économie</a></li>
+		<li><a href="#">Société</a></li>
+		<li><a href="#">Musique</a></li>
+		<li><a href="#">Sport</a></li>
+		<li><a href="#">Monde</a></li>
+		<li><a href="#">Vidéo</a></li>
+		<li><a href="#">Contact</a></li>
+	</menu>
+
+	<%= yield %>
 
 </body>
 </html>
