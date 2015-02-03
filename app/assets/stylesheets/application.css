@@ -1,32 +1,115 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@font-face {
+	font-family: 'Raleway';
+	src: asset-url('raleway-black-webfont.eot');
+	src: asset-url('raleway-black-webfont.eot?#iefix') format('embedded-opentype'),
+	asset-url('raleway-black-webfont.woff2') format('woff2'),
+	asset-url('raleway-black-webfont.woff') format('woff'),
+	asset-url('raleway-black-webfont.ttf') format('truetype'),
+	asset-url('raleway-black-webfont.svg#ralewayblack') format('svg');
+	font-weight: black;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: asset-url('raleway-blackitalic-webfont.eot');
+	src: asset-url('raleway-blackitalic-webfont.eot?#iefix') format('embedded-opentype'),
+	asset-url('raleway-blackitalic-webfont.woff2') format('woff2'),
+	asset-url('raleway-blackitalic-webfont.woff') format('woff'),
+	asset-url('raleway-blackitalic-webfont.ttf') format('truetype'),
+	asset-url('raleway-blackitalic-webfont.svg#ralewayblack_italic') format('svg');
+	font-weight: black;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: asset-url('raleway-bold-webfont.eot');
+	src: asset-url('raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	asset-url('raleway-bold-webfont.woff2') format('woff2'),
+	asset-url('raleway-bold-webfont.woff') format('woff'),
+	asset-url('raleway-bold-webfont.ttf') format('truetype'),
+	asset-url('raleway-bold-webfont.svg#ralewaybold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: asset-url('raleway-bolditalic-webfont.eot');
+	src: asset-url('raleway-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+	asset-url('raleway-bolditalic-webfont.woff2') format('woff2'),
+	asset-url('raleway-bolditalic-webfont.woff') format('woff'),
+	asset-url('raleway-bolditalic-webfont.ttf') format('truetype'),
+	asset-url('raleway-bolditalic-webfont.svg#ralewaybold_italic') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: asset-url('raleway-regular-webfont.eot');
+	src: asset-url('raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	asset-url('raleway-regular-webfont.woff2') format('woff2'),
+	asset-url('raleway-regular-webfont.woff') format('woff'),
+	asset-url('raleway-regular-webfont.ttf') format('truetype'),
+	asset-url('raleway-regular-webfont.svg#ralewayregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: asset-url('raleway-italic-webfont.eot');
+	src: asset-url('raleway-italic-webfont.eot?#iefix') format('embedded-opentype'),
+	asset-url('raleway-italic-webfont.woff2') format('woff2'),
+	asset-url('raleway-italic-webfont.woff') format('woff'),
+	asset-url('raleway-italic-webfont.ttf') format('truetype'),
+	asset-url('raleway-italic-webfont.svg#ralewayitalic') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: asset-url('raleway-thin-webfont.eot');
+	src: asset-url('raleway-thin-webfont.eot?#iefix') format('embedded-opentype'),
+	asset-url('raleway-thin-webfont.woff2') format('woff2'),
+	asset-url('raleway-thin-webfont.woff') format('woff'),
+	asset-url('raleway-thin-webfont.ttf') format('truetype'),
+	asset-url('raleway-thin-webfont.svg#ralewaythin') format('svg');
+	font-weight: thin;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: asset-url('raleway-thinitalic-webfont.eot');
+	src: asset-url('raleway-thinitalic-webfont.eot?#iefix') format('embedded-opentype'),
+	asset-url('raleway-thinitalic-webfont.woff2') format('woff2'),
+	asset-url('raleway-thinitalic-webfont.woff') format('woff'),
+	asset-url('raleway-thinitalic-webfont.ttf') format('truetype'),
+	asset-url('raleway-thinitalic-webfont.svg#ralewaythin_italic') format('svg');
+	font-weight: thin;
+	font-style: italic;
+}
 
 body {
-display: block;
-margin: 0
+	display: block;
+	margin: 0
 }
+
 .menu {
 	padding: 0;
 	margin: 0;
 	text-align:center;
 }
+
 .menu li {
-	display: inline;
+	display: inline-block;
 	list-style: none; /* pour IE7 */
 }
+
 .menu {
 	border: 1px solid #333;
 	border-top-color: #707070;
@@ -37,26 +120,27 @@ margin: 0
 	background: -o-linear-gradient(bottom , #666666 0pt, #5E5E5E 50%, #707070 51%, #808080 100%) repeat scroll 0 0 transparent;
 	background: linear-gradient(bottom , #666666 0pt, #5E5E5E 50%, #707070 51%, #808080 100%) repeat scroll 0 0 transparent;
 	text-align: center;
-	height: 36px;
+	height: 50px;
 	-webkit-box-shadow: 0 1px 3px #999;
 	-moz-box-shadow: 0 1px 3px #999;
 	box-shadow: 0 1px 3px #999;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
 }
+
 .menu a {
 	display:inline-block;
-	height: 36px;
+	height: 50px;
+	width: 70px;
 	margin:-2px;
-	padding: 0 35px;
-	line-height: 36px;
+	padding: 0 18.5px;
+	line-height: 50px;
 	border-left: 1px solid #555;
 	border-right: 1px solid #888;
 	text-decoration: none;
 	color: white;
 	text-shadow: -1px -1px 0 #444;
-	font-family: Helvetica, Arial, Verdana, sans-serif;
+	font-family: 'Raleway', Helvetica, Arial, Verdana, sans-serif;
+	font-weight: bold;
+	font-style: normal;
 	font-size: 1em;
 }
 .menu :first-child a {
