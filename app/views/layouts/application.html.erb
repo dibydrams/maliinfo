@@ -4,6 +4,8 @@
 <head>
 	<title>Mali Info</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<%= favicon_link_tag 'favicon.ico' %>
+	<%= favicon_link_tag 'apple-touch-icon.png', rel: 'apple-touch-icon', type: 'image/png' %>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
@@ -11,15 +13,7 @@
 
 <body>
 	<nav class="menu">
-		<li><a href="#">Accueil</a></li>
-		<li><a href="#">Politique</a></li>
-		<li><a href="#">Économie</a></li>
-		<li><a href="#">Société</a></li>
-		<li><a href="#">Musique</a></li>
-		<li><a href="#">Sport</a></li>
-		<li><a href="#">Monde</a></li>
-		<li><a href="#">Vidéo</a></li>
-		<li><a href="#">Contact</a></li>
+	<li><a href="#">Accueil</a></li><li><a href="#">Politique</a></li><li><a href="#">Économie</a></li><li><a href="#">Société</a></li><li><a href="#">Musique</a></li><li><a href="#">Sport</a></li><li><a href="#">Monde</a></li><li><a href="#">Vidéo</a></li><li class="contact"><a href="#">Contact</a></li>
 	</nav>
 
 	<%= yield %>

@@ -108,40 +108,38 @@ body {
 .menu li {
 	display: inline-block;
 	list-style: none; /* pour IE7 */
+	transition: all 1000ms;
+  -webkit-transition: all 1000ms;
 }
 
 .menu {
-	border: 1px solid #333;
-	border-top-color: #707070;
-	background-color: #5E5E5E;
-	background: -moz-linear-gradient(bottom , #666666 0pt, #5E5E5E 50%, #707070 51%, #808080 100%) repeat scroll 0 0 transparent;
-	background: -webkit-linear-gradient(bottom , #666666 0pt, #5E5E5E 50%, #707070 51%, #808080 100%) repeat scroll 0 0 transparent;
-	background: -ms-linear-gradient(bottom , #666666 0pt, #5E5E5E 50%, #707070 51%, #808080 100%) repeat scroll 0 0 transparent;
-	background: -o-linear-gradient(bottom , #666666 0pt, #5E5E5E 50%, #707070 51%, #808080 100%) repeat scroll 0 0 transparent;
-	background: linear-gradient(bottom , #666666 0pt, #5E5E5E 50%, #707070 51%, #808080 100%) repeat scroll 0 0 transparent;
+	background-color: #ffffff;
+	background: -moz-linear-gradient(#ffffff 40%, #d7d7d7 100%) repeat scroll 0 0 transparent;
+	background: -webkit-linear-gradient(#ffffff 40%, #d7d7d7 100%) repeat scroll 0 0 transparent;
+	background: -ms-linear-gradient(#ffffff 40%, #d7d7d7 100%) repeat scroll 0 0 transparent;
+	background: -o-linear-gradient(#ffffff 40%, #d7d7d7 100%) repeat scroll 0 0 transparent;
+	background: linear-gradient(#ffffff 40%, #d7d7d7 100%) repeat scroll 0 0 transparent;
 	text-align: center;
 	height: 50px;
-	-webkit-box-shadow: 0 1px 3px #999;
-	-moz-box-shadow: 0 1px 3px #999;
-	box-shadow: 0 1px 3px #999;
+	-webkit-box-shadow: 0 1px 4px #999;
+	-moz-box-shadow: 0 1px 4px #999;
+	box-shadow: 0 1px 4px #999;
 }
 
 .menu a {
 	display:inline-block;
 	height: 50px;
 	width: 70px;
-	margin:-2px;
+	margin:0px;
 	padding: 0 18.5px;
 	line-height: 50px;
-	border-left: 1px solid #555;
-	border-right: 1px solid #888;
+	border-right: 1px solid #4A4A4A;
 	text-decoration: none;
-	color: white;
-	text-shadow: -1px -1px 0 #444;
+	color: #4A4A4A;
 	font-family: 'Raleway', Helvetica, Arial, Verdana, sans-serif;
 	font-weight: bold;
 	font-style: normal;
-	font-size: 1em;
+	font-size: 0.9em;
 }
 .menu :first-child a {
 	border-left: 0;
@@ -149,13 +147,36 @@ body {
 .menu :last-child a {
 	border-right: 0;
 }
-.menu a:hover,
+.menu a:hover {
+	color: #CD1126;
+	transition: background 0.4s ease 0s;
+	background-color: #d7ac00;
+	background: -moz-linear-gradient(#ffd52f 0%, #d7ac00 100%) repeat scroll 0 0 transparent;
+	background: -webkit-linear-gradient(#ffd52f 0%, #d7ac00 100%) repeat scroll 0 0 transparent;
+	background: -ms-linear-gradient(#ffd52f 0%, #d7ac00 100%) repeat scroll 0 0 transparent;
+	background: -o-linear-gradient(#ffd52f 0%, #d7ac00 100%) repeat scroll 0 0 transparent;
+	background: linear-gradient(#ffd52f 0%, #d7ac00 100%) repeat scroll 0 0 transparent;
+}
+
 .menu a:focus {
-	background-color: #3E3E3E;
-	background: -moz-linear-gradient(bottom , #444444 0pt, #3E3E3E 50%, #505050 51%, #606060 100%) repeat scroll 0 0 transparent;
-	background: -webkit-linear-gradient(bottom , #444444 0pt, #3E3E3E 50%, #505050 51%, #606060 100%) repeat scroll 0 0 transparent;
-	background: -ms-linear-gradient(bottom , #444444 0pt, #3E3E3E 50%, #505050 51%, #606060 100%) repeat scroll 0 0 transparent;
-	background: -o-linear-gradient(bottom , #444444 0pt, #3E3E3E 50%, #505050 51%, #606060 100%) repeat scroll 0 0 transparent;
-	background: linear-gradient(bottom , #444444 0pt, #3E3E3E 50%, #505050 51%, #606060 100%) repeat scroll 0 0 transparent;
-	text-shadow: -1px -1px 0 #000;
+	color: white;
+	transition: background 0.4s ease 0s;
+	background-color: #00812b;
+	background: -moz-linear-gradient(#00812b, #2fab58) repeat scroll 0 0 transparent;
+	background: -webkit-linear-gradient(#00812b, #2fab58) repeat scroll 0 0 transparent;
+	background: -ms-linear-gradient(#00812b, #2fab58) repeat scroll 0 0 transparent;
+	background: -o-linear-gradient(#00812b, #2fab58) repeat scroll 0 0 transparent;
+	background: linear-gradient(#00812b, #2fab58)repeat scroll 0 0 transparent;
+}
+
+.contact a,
+.contact a:focus {
+	color: white;
+	transition: background 0.4s ease 0s;
+	background-color: #ac0e20;
+	background: -moz-linear-gradient(#ac0e20, #d63c4e) repeat scroll 0 0 transparent;
+	background: -webkit-linear-gradient(#ac0e20, #d63c4e) repeat scroll 0 0 transparent;
+	background: -ms-linear-gradient(#ac0e20, #d63c4e) repeat scroll 0 0 transparent;
+	background: -o-linear-gradient(#ac0e20, #d63c4e) repeat scroll 0 0 transparent;
+	background: linear-gradient(#ac0e20, #d63c4e)repeat scroll 0 0 transparent;
 }
