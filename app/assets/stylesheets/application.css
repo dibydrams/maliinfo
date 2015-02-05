@@ -110,10 +110,25 @@ body {
 	height: 50px;
 	background: #d7d7d7;
 	-moz-box-shadow: 0 4.5em 2.5em -2.5em #ffffff inset, 0 1px 4px #999;
-  -webkit-box-shadow: 0 4.5em 2.5em -2.5em #ffffff inset, 0 1px 4px #999;
-  -ms-box-shadow: 0 4.5em 2.5em -2.5em #ffffff inset, 0 1px 4px #999;
-  -o-box-shadow: 0 4.5em 2.5em -2.5em #ffffff inset, 0 1px 4px #999;
+	-webkit-box-shadow: 0 4.5em 2.5em -2.5em #ffffff inset, 0 1px 4px #999;
+	-ms-box-shadow: 0 4.5em 2.5em -2.5em #ffffff inset, 0 1px 4px #999;
+	-o-box-shadow: 0 4.5em 2.5em -2.5em #ffffff inset, 0 1px 4px #999;
 	box-shadow: 0 4.5em 2.5em -2.5em #ffffff inset, 0 1px 4px #999;
+}
+
+.menu:after {
+	content: " ";
+	position: absolute;
+	width: 50%;
+	height: 100px;
+	z-index: -10;
+	background: red;
+	top: 0px;
+	left: 13%;
+	width: 74%;
+	height: 50px;
+	border-radius: 125px / 12px;
+	box-shadow: 0 0 1em black;
 }
 
 .menu li {
@@ -179,9 +194,10 @@ body {
 }
 
 .home_container {
-	width: 350px;
-	height: 220px;
+	width: 321px;
+	height: 200px;
 	margin: 10px auto 20px;
 	background-position: center;
 	background-image: url('/home_logo_mali-info.png');
 }
+
