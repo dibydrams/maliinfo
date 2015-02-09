@@ -1,9 +1,13 @@
-<p>Dans index de posts</p>
+<section class="bloc_article">
 
 <ul>
 <% @posts.each do |post| %>
 	<li>
+		<div class="article">
 		<%= link_to post.title, edit_post_path(post) %>
+		<br><br>
+		<%= image_tag(post.picture_url(:thumbnail), :width => 300, :height => 215) %>
+		</div>
 	</li>
 
 <% end %>
@@ -11,4 +15,6 @@
 
 
 <%= link_to "create post", new_post_path %> 
-<%= link_to "RSS posts", posts_path(format: 'rss') %> 
+<%= link_to "RSS posts", posts_path(format: 'rss') %>
+
+</section>

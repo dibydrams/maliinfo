@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hd2c0qxh2
+  api_key: '795743297823741'
+  api_secret: kJjNXGC5mb0hrTOR3BYddvumVPc
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hd2c0qxh2
+  api_key: '795743297823741'
+  api_secret: kJjNXGC5mb0hrTOR3BYddvumVPc
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hd2c0qxh2
+  api_key: '795743297823741'
+  api_secret: kJjNXGC5mb0hrTOR3BYddvumVPc
+  enhance_image_tag: true
+  static_image_support: false
