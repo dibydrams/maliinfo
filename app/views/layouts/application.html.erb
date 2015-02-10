@@ -16,7 +16,24 @@
 		<li><a href="#">Accueil</a></li><li><a href="#">Politique</a></li><li><a href="#">Économie</a></li><li><a href="#">Société</a></li><li><a href="#">Musique</a></li><li><a href="#">Sport</a></li><li><a href="#">Monde</a></li><li><a href="#">Vidéo</a></li><li class="contact"><a href="#">Contact</a></li>
 	</nav>
 
-	<section class="home_container">
+	<section>
+		<div class="home_container">
+		</div>
+		<div class="social_icons">
+			<%= link_to posts_path(format: 'rss') do %>
+				<%= image_tag("/icon_rss.svg", size: "50", class: "social_icons") %>
+			<% end %>
+			<%= link_to 'https://www.facebook.com/maliinfo' do %>
+				<%= image_tag("/icon_fb.svg", size: "50", class: "social_icons") %>
+			<% end %>
+			<div class="clear"></div>
+			<%= link_to 'https://twitter.com/maliinfo' do %>
+				<%= image_tag("/icon_tw.svg", size: "50", class: "social_icons") %>
+			<% end %>
+			<%= link_to 'https://www.youtube.com/user/InfoMali' do %>
+				<%= image_tag("/icon_yt.svg", size: "50", class: "social_icons") %>
+			<% end %>
+		</div>
 	</section>
 
 	<section class="container menu_tag">

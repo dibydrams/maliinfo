@@ -27,6 +27,8 @@ gem 'spring',        group: :development
 gem 'carrierwave'
 gem 'cloudinary'
 
+gem 'acts-as-taggable-on'
+
 group :development, :test do
   gem 'dotenv'
 end
