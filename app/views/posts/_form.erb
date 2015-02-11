@@ -10,9 +10,9 @@
 	<%= f.hidden_field(:picture_cache) %>
     <%= f.file_field(:picture) %>
 	<br><br>
-    <%= f.label :tag, "Tag" %>
+    <%= f.label :tag_list, "Tags" %>
 	<br>
-    <%= f.text_field(:tag, size: 20) %>
-	<br><br>
+    <%= f.text_field(:tag_list, size: 20) %>
+	<br><br><br>
 	<%= f.submit %>
 <% end %>

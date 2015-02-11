@@ -1,12 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
-
 Post.create(title: "histoire", content: "Histoire pré-coloniale[modifier | modifier le code]
 Cinq empires ou royaumes importants se sont succédé : l’empire du Ghana, l’empire du Mali, l’empire songhaï, le royaume bambara de Ségou et l'empire peul du Macina. Son économie reposait sur l’agriculture, l’élevage et le commerce transsaharien avec les peuples d’Afrique du Nord intéressés par l’or, le sel et les esclaves mais aussi la culture. À son apogée l’empire s’étend de l’Atlantique au Nigeria et du Nord de la Côte d’Ivoire au Sahara.
 

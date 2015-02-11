@@ -11,7 +11,7 @@
 			</div>
 
 			<div class="article_tag">
-				<%= post.tag %>
+				<%= post.tags.map(&:name).join(', ') %>
 			</div>
 		</div>
 	</li>
