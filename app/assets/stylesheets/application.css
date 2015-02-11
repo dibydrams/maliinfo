@@ -234,6 +234,7 @@ body {
 	padding: 0;
 	margin: 0;
 	text-align: center;
+	white-space: nowrap;
 	height: 3.1em;
 	background: #d7d7d7;
 	-moz-box-shadow: 0 4.7em 2.5em -2.5em #ffffff inset, 0 0.1em 0.2em #999;
@@ -268,7 +269,7 @@ body {
 .menu a {
 	display: inline-block;
 	height: 3.1em;
-	width: 70px;
+	width: 4.375em;
 	margin:0;
 	padding: 0 18.5px;
 	line-height: 3.1em;
@@ -299,9 +300,9 @@ body {
 	color: #CD1126;
 	background: #d7ac00;
 	-moz-box-shadow: 0 4.5em 2.5em -2.5em #ffd52f inset;
-  -webkit-box-shadow: 0 4.5em 2.5em -2.5em #ffd52f inset;
-  -ms-box-shadow: 0 4.5em 2.5em -2.5em #ffd52f inset;
-  -o-box-shadow: 0 4.5em 2.5em -2.5em #ffd52f inset;
+	-webkit-box-shadow: 0 4.5em 2.5em -2.5em #ffd52f inset;
+	-ms-box-shadow: 0 4.5em 2.5em -2.5em #ffd52f inset;
+	-o-box-shadow: 0 4.5em 2.5em -2.5em #ffd52f inset;
 	box-shadow: 0 4.5em 2.5em -2.5em #ffd52f inset;
 }
 
@@ -309,9 +310,9 @@ body {
 	color: white;
 	background: #2fab58;
 	-moz-box-shadow: 0 3.5em 2.5em -2.5em #00812b inset;
-  -webkit-box-shadow: 0 3.5em 2.5em -2.5em #00812b inset;
-  -ms-box-shadow: 0 3.5em 2.5em -2.5em #00812b inset;
-  -o-box-shadow: 0 3.5em 2.5em -2.5em #00812b inset;
+	-webkit-box-shadow: 0 3.5em 2.5em -2.5em #00812b inset;
+	-ms-box-shadow: 0 3.5em 2.5em -2.5em #00812b inset;
+	-o-box-shadow: 0 3.5em 2.5em -2.5em #00812b inset;
 	box-shadow: 0 3.5em 2.5em -2.5em #00812b inset;
 }
 
@@ -327,11 +328,12 @@ body {
 }
 
 .home_container {
-	width: 321px;
+	width: auto;
 	height: 200px;
 	margin: 10px auto 20px;
-	background-position: center;
 	background-image: url('/home_logo_mali-info.png');
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .social_icons {

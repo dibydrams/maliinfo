@@ -18,21 +18,21 @@
 
 	<section>
 		<div class="home_container">
-		</div>
 		<div class="social_icons">
-			<%= link_to posts_path(format: 'rss') do %>
+			<%= link_to posts_path(format: 'rss'), :target => "_blank" do %>
 				<%= image_tag("/icon_rss.svg", size: "50", class: "social_icons") %>
 			<% end %>
-			<%= link_to 'https://www.facebook.com/maliinfo' do %>
+			<%= link_to 'https://www.facebook.com/maliinfo', :target => "_blank" do %>
 				<%= image_tag("/icon_fb.svg", size: "50", class: "social_icons") %>
 			<% end %>
 			<div class="clear"></div>
-			<%= link_to 'https://twitter.com/maliinfo' do %>
+			<%= link_to 'https://twitter.com/maliinfo', :target => "_blank" do %>
 				<%= image_tag("/icon_tw.svg", size: "50", class: "social_icons") %>
 			<% end %>
-			<%= link_to 'https://www.youtube.com/user/InfoMali' do %>
+			<%= link_to 'https://www.youtube.com/user/InfoMali', :target => "_blank" do %>
 				<%= image_tag("/icon_yt.svg", size: "50", class: "social_icons") %>
 			<% end %>
+		</div>
 		</div>
 	</section>
 
