@@ -5,7 +5,7 @@ Site d'information, actualité malienne
 
 * Ruby on Rails
 
-* PostgreSQl
+* PostgreSQL
 
 
 Site déployé provisoirement sur Heroku à cette adresse :
