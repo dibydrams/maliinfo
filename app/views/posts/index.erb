@@ -7,11 +7,18 @@
 			<div class="article_title">
 				<%= link_to post.title, edit_post_path(post) %>
 				<br><br>
+			</div>
+
+			<div class="article_picture">
 				<%= image_tag(post.picture_url(:thumbnail), :width => 300, :height => 215) %>
 			</div>
 
-			<div class="article_tag">
-				<%= post.tags.map(&:name).join(', ') %>
+			<div class="article_description">
+				<div class="article_summary">
+				</div>
+				<div class="article_tag">
+					<%= link_to post.tags.map(&:name).join(', ') %>
+				</div>
 			</div>
 		</div>
 	</li>

@@ -5,7 +5,7 @@
 	<br><br>
 	<%= f.label :content, "Texte" %>
 	<br>
-	<%= f.text_area(:content) %>
+	<%= f.text_area(:content, size: "67x20") %>
 	<br><br>
 	<%= f.hidden_field(:picture_cache) %>
     <%= f.file_field(:picture) %>
@@ -13,6 +13,6 @@
     <%= f.label :tag_list, "Tags" %>
 	<br>
     <%= f.text_field(:tag_list, size: 20) %>
-	<br><br><br>
+	<br><br>
 	<%= f.submit %>
 <% end %>
