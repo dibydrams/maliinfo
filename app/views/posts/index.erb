@@ -10,14 +10,15 @@
 			</div>
 
 			<div class="article_picture">
-				<%= image_tag(post.picture_url(:thumbnail), :width => 300, :height => 215) %>
+				<%= link_to image_tag(post.picture_url(:thumbnail), :width => 300, :height => 215), edit_post_path(post) %>
 			</div>
 
 			<div class="article_description">
 				<div class="article_summary">
+					<%= post.content.split[0..60].join(" ") %>...
 				</div>
-				<div class="article_tag">
-					<%= link_to post.tags.map(&:name).join(', ') %>
+				<div class="read_more">
+					<%= link_to 'lire la suite...', edit_post_path(post) %>
 				</div>
 			</div>
 		</div>
