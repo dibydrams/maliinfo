@@ -1,7 +1,7 @@
 <%= form_for(@post) do |f| %>
 	<%= f.label :title, "Titre" %>
 	<br>
-	<%= f.text_field(:title, size: 20) %>
+	<%= f.text_field(:title, size: 93) %>
 	<br><br>
 	<%= f.label :content, "Texte" %>
 	<br>
@@ -12,7 +12,7 @@
 	<br><br>
     <%= f.label :tag_list, "Tags" %>
 	<br>
-    <%= f.text_field(:tag_list, size: 20) %>
+    <%= f.text_field(:tag_list, size: 93) %>
 	<br><br>
 	<%= f.submit %>
 <% end %>
