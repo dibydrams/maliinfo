@@ -554,6 +554,7 @@ p#carrousel_controls {
 	border-style: solid;
 	border-color: rgba(205, 17, 38,1) transparent;
 	overflow: hidden;
+	transition:border-color 1s ease
 }
 
 .read_more:after {
@@ -567,6 +568,7 @@ p#carrousel_controls {
 	border-style: solid;
 	border-color: rgba(205, 17, 38, 1) transparent;
 	overflow: hidden;
+	transition:border-color 1s ease
 }
 
 .read_more:hover:before {
