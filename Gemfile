@@ -31,6 +31,7 @@ gem 'acts-as-taggable-on'
 
 group :development, :test do
   gem 'dotenv'
+  gem 'fabrication'
 end
 
 gem 'rails_12factor', group: :production

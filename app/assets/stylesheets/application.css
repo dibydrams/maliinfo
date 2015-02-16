@@ -289,7 +289,7 @@ h1 {
 	list-style: none; /* pour IE7 */
 }
 
-.menu a {
+.menu a{
 	display: inline-block;
 	height: 3.1em;
 	width: 4.375em;
@@ -329,7 +329,7 @@ h1 {
 	box-shadow: 0 4.5em 2.5em -2.5em #ffd52f inset;
 }
 
-.menu a:focus {
+.menu a:focus, .menu-selected a {
 	color: white;
 	background: #2fab58;
 	-moz-box-shadow: 0 3.5em 2.5em -2.5em #00812b inset;
@@ -668,6 +668,12 @@ p#carrousel_controls {
 	font-size: 1em;
 }
 
+input:focus {
+    outline-color: #75d948;
+	outline-style: auto;
+	outline-width: 5px;
+}
+
 input#post_title {
 	width: 620px;
 	line-height: 2em;
@@ -692,6 +698,17 @@ textarea#post_content {
 	border: 2px inset;
 }
 
+textarea#post_content:focus {
+	outline-color: #75d948;
+	outline-style: auto;
+	outline-width: 5px;
+	-moz-box-shadow: 0 0.5em 5.5em -1.5em #75d948 inset;
+	-webkit-box-shadow: 0 0.5em 5.5em -1.5em #75d948 inset;
+	-ms-box-shadow: 0 0.5em 5.5em -1.5em #75d948 inset;
+	-o-box-shadow: 0 0.5em 5.5em -1.5em #75d948 inset;
+	box-shadow: 0 0.5em 5.5em -1.5em #75d948 inset;
+}
+
 input#post_picture {
 
 }
@@ -708,6 +725,13 @@ input#post_tag_list {
 	-ms-box-shadow: 0 0.5em 5.5em -1.5em #999 inset;
 	-o-box-shadow: 0 0.5em 5.5em -1.5em #999 inset;
 	box-shadow: 0 0.5em 5.5em -1.5em #999 inset;
+}
+
+input#post_title:focus,
+input#post_tag_list:focus {
+	outline-color: #75d948;
+	outline-style: auto;
+	outline-width: 5px;
 }
 
 input[type="submit"] {

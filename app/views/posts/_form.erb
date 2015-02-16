@@ -10,6 +10,10 @@
 	<%= f.hidden_field(:picture_cache) %>
     <%= f.file_field(:picture) %>
 	<br><br>
+    <%= f.label :category, "Category" %>
+	<br>
+    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
+    <br><br>
     <%= f.label :tag_list, "Tags" %>
 	<br>
     <%= f.text_field(:tag_list, size: 93) %>

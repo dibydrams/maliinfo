@@ -16,3 +16,6 @@ Ancienne colonie française du Soudan français, le Mali est devenu indépendant
 
 La république du Mali a conservé les frontières héritées de la colonisation, celles du Soudan français. Antérieurement, plusieurs royaumes et empires se sont succédé, englobant une partie plus ou moins importante du Mali actuel et des pays limitrophes.")
 
+categories =  Category.create([{name: "Politique"}, 
+		{name: "Économie"}, 
+		{name: "Société"}])

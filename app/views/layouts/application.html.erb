@@ -13,7 +13,19 @@
 
 <body>
 	<nav class="menu">
-		<li><a href="#">Accueil</a></li><li><a href="#">Politique</a></li><li><a href="#">Économie</a></li><li><a href="#">Société</a></li><li><a href="#">Musique</a></li><li><a href="#">Sport</a></li><li><a href="#">Monde</a></li><li><a href="#">Vidéo</a></li><li class="contact"><a href="#">Contact</a></li>
+        <% unless @category %>
+		    <li class='menu-selected'><a href="/">Accueil</a></li>
+		<% else %>
+			<li class='menu'><a href="/">Accueil</a></li>
+		<% end %>
+	    <% Category.all.each do |category| %>
+	        <% if @category && @category.id == category.id %>
+			<li class='menu-selected'><%= link_to category.name, category_path(category) %></li>
+			<% else %>
+			<li class='menu'><%= link_to category.name, category_path(category) %></li>
+			<% end %>
+		<% end %>
+		<li class="contact"><a href="/">Contact</a></li>
 	</nav>
 
 	<section>

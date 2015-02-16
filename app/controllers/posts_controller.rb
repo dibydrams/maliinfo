@@ -10,7 +10,6 @@ class PostsController < ApplicationController
 
 	def new
 		@post = Post.new
-		set_available_data
 	end
 
 	def create
@@ -24,7 +23,6 @@ class PostsController < ApplicationController
 
 	def edit
 		@post = Post.find params[:id]
-		set_available_data
 	end
 
 	def update
@@ -43,12 +41,7 @@ class PostsController < ApplicationController
 
 	private
 
-  def set_available_data
-    @available_posts = Post.all
-    @available_tags = I18n.t(:tags)
-  end
-
 	def post_params
-		params.require(:post).permit(:title, :picture, :picture_cache, :content, :tag_list)
+		params.require(:post).permit(:title, :picture, :picture_cache, :content, :tag_list, category_ids: [])
 	end
 end
