@@ -1,4 +1,5 @@
 /.bundle
 /log/*.log
+/public/uploads/tmp
 /tmp
 .env
