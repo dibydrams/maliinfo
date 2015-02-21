@@ -12,138 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ *= loading.css
+ *= social-icons.css
  */
-
- html {
-	background:transparent; 
-}
-
-.bubblingG {
-	text-align: center;
-	width:100px;
-	height:63px;
-}
-
-.bubblingG span {
-	display: inline-block;
-	vertical-align: middle;
-	width: 13px;
-	height: 13px;
-	margin: 31px auto;
-	background: #009933;
-	-moz-border-radius: 63px;
-	-moz-animation: bubblingG 0.5s infinite alternate;
-	-webkit-border-radius: 63px;
-	-webkit-animation: bubblingG 0.5s infinite alternate;
-	-o-border-radius: 63px;
-	-o-animation: bubblingG 0.5s infinite alternate;
-	-ms-border-radius: 63px;
-	-ms-animation: bubblingG 0.5s infinite alternate;
-	border-radius: 63px;
-	animation: bubblingG 0.5s infinite alternate;
-}
-
-#bubblingG_1 {
-	background-color:#009933;
-	-moz-animation-delay: 0s;
-	-webkit-animation-delay: 0s;
-	-o-animation-delay: 0s;
-	-ms-animation-delay: 0s;
-	animation-delay: 0s;
-}
-
-#bubblingG_2 {
-	background-color:#FFCC00;
-	-moz-animation-delay: 0.15s;
-	-webkit-animation-delay: 0.15s;
-	-o-animation-delay: 0.15s;
-	-ms-animation-delay: 0.15s;
-	animation-delay: 0.15s;
-}
-
-#bubblingG_3 {
-	background-color:#CD1126;
-	-moz-animation-delay: 0.3s;
-	-webkit-animation-delay: 0.3s;
-	-o-animation-delay: 0.3s;
-	-ms-animation-delay: 0.3s;
-	animation-delay: 0.3s;
-}
-
-@-moz-keyframes bubblingG {
-	0% {
-		width: 13px;
-		height: 13px;
-		background-color:#ffffff;
-		-moz-transform: translateY(0);
-	}
-
-	100% {
-		width: 30px;
-		height: 30px;
-		-moz-transform: translateY(-26px);
-	}
-}
-
-@-webkit-keyframes bubblingG {
-	0% {
-		width: 13px;
-		height: 13px;
-		background-color:#ffffff;
-		-webkit-transform: translateY(0);
-	}
-
-	100% {
-		width: 30px;
-		height: 30px;
-		-webkit-transform: translateY(-26px);
-	}
-}
-
-@-o-keyframes bubblingG {
-	0% {
-		width: 13px;
-		height: 13px;
-		background-color:#ffffff;
-		-o-transform: translateY(0);
-	}
-
-	100% {
-		width: 30px;
-		height: 30px;
-		-o-transform: translateY(-26px);
-	}
-}
-
-@-ms-keyframes bubblingG {
-	0% {
-		width: 13px;
-		height: 13px;
-		background-color:#ffffff;
-		-ms-transform: translateY(0);
-	}
-
-	100% {
-		width: 30px;
-		height: 30px;
-		-ms-transform: translateY(-26px);
-	}
-}
-
-@keyframes bubblingG {
-	0% {
-		width: 13px;
-		height: 13px;
-		background-color:#ffffff;
-		transform: translateY(0);
-	}
-
-	100% {
-		width: 30px;
-		height: 30px;
-		transform: translateY(-26px);
-	}
-}
 
 @font-face {
 	font-family: 'Raleway';
@@ -241,9 +112,22 @@
 	font-style: italic;
 }
 
-body {
-	display: block;
-	margin: 0
+/**, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}*/
+
+body, html {
+	font-size: 100%;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	background:transparent;
+}
+
+a {
+	text-decoration: none;
 }
 
 h1 {
@@ -363,7 +247,7 @@ h1 {
 
 .social_icons {
 	float: right;
-	padding: 0.5em;
+	padding: 0em;
 }
 
 .container {
@@ -480,6 +364,32 @@ p#carrousel_controls {
 	font-size: 1.3em;
 }
 
+.article:hover .read_more:before {
+	content: "";
+	position: absolute;
+	z-index: -10;
+	border-width: 2em;
+	bottom: 50%;
+	right: 0;
+	width: 100%;
+	border-style: solid;
+	border-color: rgba(0, 153, 255, 1) transparent;
+	overflow: hidden;
+}
+
+.article:hover .read_more:after {
+	content: "";
+	position: absolute;
+	z-index: -10;
+	border-width: 2em;
+	bottom: 50%;
+	right: 0;
+	width: 100%;
+	border-style: solid;
+	border-color: rgba(0, 153, 255, 1) transparent;
+	overflow: hidden;
+}
+
 .article a {
 	text-decoration: none;
 	color: #4A4A4A;
@@ -569,32 +479,6 @@ p#carrousel_controls {
 	border-color: rgba(205, 17, 38, 1) transparent;
 	overflow: hidden;
 	transition:border-color 1s ease
-}
-
-.read_more:hover:before {
-	content: "";
-	position: absolute;
-	z-index: -10;
-	border-width: 2em;
-	bottom: 50%;
-	right: 0;
-	width: 100%;
-	border-style: solid;
-	border-color: rgba(0, 153, 255, 1) transparent;
-	overflow: hidden;
-}
-
-.read_more:hover:after {
-	content: "";
-	position: absolute;
-	z-index: -10;
-	border-width: 2em;
-	bottom: 50%;
-	right: 0;
-	width: 100%;
-	border-style: solid;
-	border-color: rgba(0, 153, 255, 1) transparent;
-	overflow: hidden;
 }
 
 .article_tag {
