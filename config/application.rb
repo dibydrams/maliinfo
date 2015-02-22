@@ -11,5 +11,6 @@ module Maliinfo
     config.time_zone = 'Europe/Paris'
     config.i18n.default_locale = :fr
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
   end
 end
