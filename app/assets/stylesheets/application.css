@@ -14,8 +14,10 @@
  *= require_self
  *= loading.css
  *= social-icons.css
+ *= carrousel.css
  */
 
+/*** POLICES ***/
 @font-face {
 	font-family: 'Raleway';
 	src: asset-url('raleway-black-webfont.eot');
@@ -112,6 +114,8 @@
 	font-style: italic;
 }
 
+/*** GÉNÉRAL ***/
+
 /**, *:after, *:before {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -119,11 +123,16 @@
 }*/
 
 body, html {
-	font-size: 100%;
 	padding: 0;
 	margin: 0;
 	height: 100%;
+	font-size: 100%;
 	background:transparent;
+}
+
+ul {
+	margin:0px;
+	padding:0px;
 }
 
 a {
@@ -137,6 +146,7 @@ h1 {
 	font-size: 1.3em;
 }
 
+/*** MENU ***/
 .menu {
 	padding: 0;
 	margin: 0;
@@ -234,10 +244,11 @@ h1 {
 	box-shadow: 0 3.5em 2.5em -2.5em #ac0e20 inset;
 }
 
+/*** PAGE D'ACCUEIL ***/
 .home_container {
 	width: auto;
 	height: 12.5em;
-	margin: 0.65em 8.3em;
+	margin: 0.65em 7.5em;
 	background-image: url('/home_logo_mali-info.png');
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -309,7 +320,8 @@ h1 {
 	overflow: hidden;
 }
 
-p#carrousel_controls {
+/*** CARROUSEL ***/
+/*p#carrousel_controls {
   text-align: center;
 }
 
@@ -341,11 +353,13 @@ p#carrousel_controls {
 	opacity:1;
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	filter: alpha(opacity=1);
-}
+}*/
 
+/*** ARTICLE PAGE THÉMATIQUE ***/
 .bloc_article {
 	display: block;
 	width: 45em;
+	margin-left: 12em;
 }
 
 .bloc_article li {
@@ -504,6 +518,7 @@ p#carrousel_controls {
 	box-shadow: 0 3.5em 2.5em -2.5em #00812b inset, 0 0.1em 0.2em #999;
 }
 
+/*** BOUTON ***/
 .create_post_button a {
 	display:block;
 	float: left;
@@ -538,6 +553,7 @@ p#carrousel_controls {
 	box-shadow: 0 4.5em 2.5em -2.5em #ffd52f inset, 0 0.1em 0.2em #999;
 }
 
+/*** FORMULAIRE ***/
 .form {
 	display: block;
 	width: 670px;
@@ -662,6 +678,7 @@ input[type="submit"] :hover {
 	box-shadow: 0 4.5em 2.5em -2.5em #ffd52f inset, 0 0.1em 0.2em #999;
 }
 
+/*** PAGE ARTICLE ***/
 .article_page {
 	width: 630px;
 	margin-bottom: 1em;
@@ -700,4 +717,66 @@ input[type="submit"] :hover {
 	font-style: normal;
 	font-size: 0.7em;
 	color: #4A4A4A;
+}
+
+/*===============================================================================================================================FORMAT SMARTPHONE PORTRAIT========  MAX-WIDTH: 320PX  =============*/
+@media (max-width: 400px) {
+	.menu {
+		display: none;
+	}
+
+	.home_container {
+		margin: 0.65em 0em;
+		background-position: left;
+		background-size: 230px;
+		height: 10.5em;
+	}
+
+	.container.menu_tag {
+		display: none;
+	}
+
+	.bloc_article {
+		margin-left: 0;
+		width: 100%;
+	}
+
+	.article {
+	width: 100%;
+	margin-bottom: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 6.5em;
+	font-size: 1em;
+	}
+
+	.article_title {
+		width: 100%;
+	}
+
+	.article_description {
+		width: 170px;
+		height: 100px;
+		font-size: 0.5em;
+	}
+
+	.article_picture {
+		width: 150px;
+		height: 100px;
+	}
+		.article_picture img{
+			width: 150px;
+			height: 100px;
+		}
+
+	.article_summary {
+		padding-left: 20px;
+		width: 200px;
+		height: 100px;
+		font-size: 1.2em;
+	}
+
+	.read_more {
+		display: none;
+	}
 }
