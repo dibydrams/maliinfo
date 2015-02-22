@@ -114,6 +114,17 @@
 	font-style: italic;
 }
 
+@font-face {
+	font-family: 'Social Icon';
+	src: asset-url('social-icons.eot');
+	src: asset-url('social-icons.eot?#iefix') format('embedded-opentype'),
+	asset-url('social-icons.woff') format('woff'),
+	asset-url('social-icons.ttf') format('truetype'),
+	asset-url('social-icons.svg#ecoicon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 /*** GÉNÉRAL ***/
 
 /**, *:after, *:before {
