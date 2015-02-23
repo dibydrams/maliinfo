@@ -1,4 +1,6 @@
 Rails.application.configure do
+  config.assets.enabled = true
+  config.assets.paths << "#{Rails.root}/app/assets/fonts" 
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on

@@ -29,6 +29,9 @@ gem 'cloudinary'
 
 gem 'acts-as-taggable-on'
 
+gem 'wysiwyg-rails'
+gem 'font-awesome-rails'
+
 group :development, :test do
   gem 'dotenv'
   gem 'fabrication'
