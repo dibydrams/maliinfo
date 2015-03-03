@@ -8,10 +8,11 @@
 <section id="zone_carrousel">
 	<div id="container_carrousel" class="shadow">
 		<ul class="carrousel">
-			<li><img src="./abdoulaye_diop.png" alt="" /></li>
-			<li><img src="./blaise_comparoe.jpg" alt="" /></li>
-			<li><img src="./ibk.jpg" alt="" /></li>
-			<li><img src="./moussa_mara.jpg" alt="" /></li>
+			<% @slides.each do |post| %>
+				<li>
+					<%= link_to cl_image_tag(post.picture_url(:standard), :width => 630, :height => 420, :crop => :fill), post_path(post) %>
+				</li>
+			<% end %>
 		</ul>
 	</div>
 </section>
@@ -33,7 +34,7 @@
 
 			<div class="article_description">
 				<div class="article_summary">
-					<%= link_to truncate(post.content, length: 350, separator: ' '), post_path(post) %>
+					<%= link_to sanitize(post.content.truncate(350, separator: ' ')), post_path(post) %>
 				</div>
 				<div class="read_more">
 					<%= link_to 'lire la suite...', post_path(post) %>

@@ -5,6 +5,8 @@ class PostsController < ApplicationController
 		respond_to do |format|
       		format.html
       		format.rss { render :layout => false }
+
+    	@slides = Post.limit(5)
     	end
 	end
 
