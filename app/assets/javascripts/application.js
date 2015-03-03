@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require froala_editor.min.js
-
 //= require responsivecarrousel.min.js
 
 $(document).ready(function() {
