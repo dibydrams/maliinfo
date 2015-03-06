@@ -3,14 +3,20 @@
 	<br>
 	<%= f.text_field(:title, size: 93) %>
 	<br><br>
+	<%= f.label :published_at, "Publié le" %>
+	<br>
+	<%= f.date_field(:published_at) %>
+	<br><br>
 	<%= f.label :content, "Texte" %>
 	<br>
 	<%= f.text_area(:content, size: "67x20") %>
 	<br><br>
+	<%= f.label :picture, "Ajouter une image" %>
+	<br>
 	<%= f.hidden_field(:picture_cache) %>
     <%= f.file_field(:picture) %>
 	<br><br>
-    <%= f.label :category, "Category" %>
+    <%= f.label :category, "Catégorie" %>
 	<br>
     <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
     <br><br>
@@ -18,5 +24,11 @@
 	<br>
     <%= f.text_field(:tag_list, size: 93) %>
 	<br><br>
+	Mise en avant
+	<br>
+	<%= f.check_box :spotlight, name: 'à la une' %><%= f.label :spotlight, "à la une" %>
+	<br>
+    <%= f.check_box :inshort, name: 'en bref' %><%= f.label :inshort, "en bref" %>
+    <br><br>
 	<%= f.submit %>
 <% end %>

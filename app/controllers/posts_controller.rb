@@ -1,12 +1,16 @@
 class PostsController < ApplicationController
 	def index
-		@posts = Post.all
+		@posts = Post.offset(4)
 
 		respond_to do |format|
       		format.html
       		format.rss { render :layout => false }
 
     	@slides = Post.limit(5)
+    	@whitepost = Post.highlight.limit(1)
+    	@greenpost = Post.limit(1).offset(1)
+    	@yellowpost = Post.limit(1).offset(2)
+    	@redpost = Post.limit(1).offset(3)
     	end
 	end
 
