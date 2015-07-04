@@ -1,10 +1,14 @@
-<section class="menu_tag">
-	<div class="tag_intro">
-		<p>En ce moment...</p>
+<section>
+	<div class="menu_tag">
+		<div class="tag_intro">
+			<p>En ce moment...</p>
+		</div>
 	</div>
-	<marquee behavior="scroll" loop="10" Scrollamount="5" Scrolldelay="0.01" OnmouseOut="this.start();" OnMouseOver="this.stop();">allô</marquee>
-</section>
 
+	<div class="marquee">
+		<marquee behavior="scroll" loop="10" Scrollamount="5" Scrolldelay="0.01" OnmouseOut="this.start();" OnMouseOver="this.stop();">allô</marquee>
+	</div>
+</section>
 
 <section id="zone_carrousel">
 	<div id="container_carrousel" class="shadow">
@@ -151,8 +155,11 @@
 <% end %>
 </ul>
 
-<div class="create_post_button">
-<%= link_to "create post", new_post_path %>
-</div>
+<% if user_signed_in? %>
+	<div class="create_post_button">
+	  <%= link_to "create post", new_post_path %>
+	</div>
+<% end %>
+
 
 </section>

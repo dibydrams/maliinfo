@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.6'
+gem 'rails', '4.2.2'
 # Use PosgreSQL as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -31,6 +31,8 @@ gem 'acts-as-taggable-on'
 
 gem 'wysiwyg-rails'
 gem 'font-awesome-rails'
+
+gem 'devise'
 
 group :development, :test do
   gem 'dotenv'

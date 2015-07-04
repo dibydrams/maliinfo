@@ -1,27 +1,29 @@
 
-	<div class="article_page">
-		<div class="article_page_title">
-			<%= @post.title %>
-			<br><br>
-		</div>
+  <div class="article_page">
+    <div class="article_page_title">
+      <%= @post.title %>
+      <br><br>
+    </div>
 
-		<div class="article_page_picture">
-			<%= cl_image_tag(@post.picture_url(:standard), :width => 630, :height => 420) %>
-		</div>
+    <div class="article_page_picture">
+      <%= cl_image_tag(@post.picture_url(:standard), :width => 630, :height => 420) %>
+    </div>
 
-		<div class="article_content">
-			<%= raw(@post.content) %>
-		</div>
-	</div>
-
-<div class="create_post_button">
-<%= link_to "retour", posts_path %>
-</div>
+    <div class="article_content">
+      <%= raw(@post.content) %>
+    </div>
+  </div>
 
 <div class="create_post_button">
-<%= link_to "edit post", edit_post_path %>
+<%= link_to "retour", :back %>
 </div>
 
-<div class="create_post_button">
-<%= link_to "create post", new_post_path %>
-</div>
+<% if user_signed_in? %>
+  <div class="create_post_button">
+  <%= link_to "edit post", edit_post_path %>
+  </div>
+
+  <div class="create_post_button">
+  <%= link_to "create post", new_post_path %>
+  </div>
+<% end %>
