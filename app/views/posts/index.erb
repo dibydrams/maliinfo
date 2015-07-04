@@ -1,7 +1,8 @@
-<section class="container menu_tag">
+<section class="menu_tag">
 	<div class="tag_intro">
 		<p>En ce moment...</p>
 	</div>
+	<marquee behavior="scroll" loop="10" Scrollamount="5" Scrolldelay="0.01" OnmouseOut="this.start();" OnMouseOver="this.stop();">allô</marquee>
 </section>
 
 
@@ -18,6 +19,8 @@
 
 	<% @whitepost.each do |post| %>
 		<div class="spotlight_article">
+			<div class="focus_effect"></div>
+
 			<div class="spotlight_article_title">
 				<h1>
 					<%= link_to truncate(post.title, length: 350, separator: ' '), post_path(post) %>
@@ -38,24 +41,28 @@
 			</div>			
 		</div>
 	<% end %>
+</section>
 
+<div id="spotlight">
 	<% @greenpost.each do |post| %>
-		<div class="spotlight_article">
-			<div class="spotlight_article_title">
+		<div class="spotlight_article_green">
+			<div class="focus_effect_green"></div>
+
+			<div class="spotlight_article_green_title">
 				<h1>
 					<%= link_to post.title, post_path(post) %>
 				</h1>
 			</div>
 
-			<div class="spotlight_article_picture">
+			<div class="spotlight_article_green_picture">
 				<%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 330, :height => 220, :crop => :fill), post_path(post) %>
 			</div>
 
-			<div class="spotlight_article_description">
-				<div class="spotlight_article_summary">
+			<div class="spotlight_article_green_description">
+				<div class="spotlight_article_green_summary">
 					<%= link_to sanitize(post.content.truncate(200, separator: ' ')), post_path(post) %>
 				</div>
-				<div class="read_more">
+				<div class="read_more_green">
 					<%= link_to 'lire la suite...', post_path(post) %>
 				</div>
 			</div>			
@@ -63,22 +70,24 @@
 	<% end %>
 
 	<% @yellowpost.each do |post| %>
-		<div class="spotlight_article">
-			<div class="spotlight_article_title">
+		<div class="spotlight_article_yellow">
+			<div class="focus_effect_yellow"></div>
+
+			<div class="spotlight_article_yellow_title">
 				<h1>
 					<%= link_to post.title, post_path(post) %>
 				</h1>
 			</div>
 
-			<div class="spotlight_article_picture">
+			<div class="spotlight_article_yellow_picture">
 				<%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 330, :height => 220, :crop => :fill), post_path(post) %>
 			</div>
 
-			<div class="spotlight_article_description">
-				<div class="spotlight_article_summary">
+			<div class="spotlight_article_yellow_description">
+				<div class="spotlight_article_yellow_summary">
 					<%= link_to sanitize(post.content.truncate(200, separator: ' ')), post_path(post) %>
 				</div>
-				<div class="read_more">
+				<div class="read_more_yellow">
 					<%= link_to 'lire la suite...', post_path(post) %>
 				</div>
 			</div>			
@@ -86,22 +95,24 @@
 	<% end %>
 
 	<% @redpost.each do |post| %>
-		<div class="spotlight_article">
-			<div class="spotlight_article_title">
+		<div class="spotlight_article_red">
+			<div class="focus_effect_red"></div>
+			
+			<div class="spotlight_article_red_title">
 				<h1>
 					<%= link_to post.title, post_path(post) %>
 				</h1>
 			</div>
 
-			<div class="spotlight_article_picture">
+			<div class="spotlight_article_red_picture">
 				<%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 330, :height => 220, :crop => :fill), post_path(post) %>
 			</div>
 
-			<div class="spotlight_article_description">
-				<div class="spotlight_article_summary">
+			<div class="spotlight_article_red_description">
+				<div class="spotlight_article_red_summary">
 					<%= link_to sanitize(post.content.truncate(200, separator: ' ')), post_path(post) %>
 				</div>
-				<div class="read_more">
+				<div class="read_more_red">
 					<%= link_to 'lire la suite...', post_path(post) %>
 				</div>
 			</div>			
@@ -115,10 +126,12 @@
 <% @posts.each do |post| %>
 	<li>
 		<div class="article">
-			<div class="article_title">
-				<h1>
-					<%= link_to post.title, post_path(post) %>
-				</h1>
+			<div class"focus_effect">
+				<div class="article_title">
+					<h1>
+						<%= link_to post.title, post_path(post) %>
+					</h1>
+				</div>
 			</div>
 
 			<div class="article_picture">

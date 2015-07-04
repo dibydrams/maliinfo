@@ -1,3 +1,11 @@
+#zone_carrousel {
+	margin-left: auto;
+	margin-right: auto;
+	width: 88%; 
+	margin-bottom: 2em;
+	height: 500px;
+}
+
 .carrousel {
 	position: relative;
 	list-style: none;
@@ -31,10 +39,11 @@
 /*===============================================================================================================================FORMAT TABLETTE ET SMARTPHONE==========MAX : 768PX===========*/
 @media (max-width: 768px) {
 	#zone_carrousel {
-		margin-left: 10%;
-		margin-bottom: 2em;
-		height:auto;
-		max-height: 420px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 0;
+		width: 88%;
+		height: 500px;
 	}
 	#container_carrousel {
 		display: block;
@@ -42,26 +51,27 @@
 		max-width:630px;
 		width:100%;
 		height:100%;
-		margin-left: 2.2em;
-		margin-right: 2.2em;
+		margin-left: 0em;
+		margin-right: 0em;
 	}
 }
 /*===============================================================================================================================FORMAT PC=========MIN : 769PX============*/
 @media (min-width: 769px) {
 	#zone_carrousel {
-		margin-left: 10%;
-		margin-bottom: 2em;
-		height:auto;
-		max-height: 420px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 0;
+		height: 500px;
 		}
 	#container_carrousel {
 		display: block;
 		float: left;
 		max-width:630px;
 		width:100%;
-		height:100%;
-		margin-left: 2.2em;
-		margin-right: 2.2em;
+		height:95%;
+		margin-top: 1.15em;
+		margin-left: 3.541em;
+		margin-right: 3.541em;
 	}
 	.carrousel {
 		box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 8px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -77,8 +87,7 @@
 /*===============================================================================================================================FORMAT SMARTPHONE========  MAX: 600PX  =============*/
 @media (max-width: 600px) {
 	#zone_carrousel{
-		height:auto;
-		max-height: 420px;
+		height: 500px;
 		padding:0;
 	}
 	
