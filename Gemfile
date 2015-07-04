@@ -34,6 +34,8 @@ gem 'font-awesome-rails'
 
 gem 'devise'
 
+gem 'friendly_id', '~> 5.1.0'
+
 group :development, :test do
   gem 'dotenv'
   gem 'fabrication'
