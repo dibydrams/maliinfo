@@ -16,8 +16,10 @@
 //= require froala_editor.min.js
 //= require responsivecarrousel.min.js
 
-$(document).ready(function() {
-	$('#post_content').editable({inlineMode: false})
+var ready;
+ready = function() {
+
+  $('#post_content').editable({inlineMode: false})
   // $("#carrousel_controls").on('click', 'span', function() {
   //   $("#carrousel img").removeClass("opaque");
 
@@ -28,4 +30,8 @@ $(document).ready(function() {
   //   $("#carrousel_controls span").removeClass("selected");
   //   $(this).addClass("selected");
   // });
-});
+
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
