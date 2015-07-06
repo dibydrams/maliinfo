@@ -26,9 +26,9 @@
 	<br><br>
 	Mise en avant
 	<br>
-	<%= f.check_box :spotlight, name: 'à la une' %><%= f.label :spotlight, "à la une" %>
+	<%= f.check_box :spotlight, {}, true, false %><%= f.label :spotlight, "à la une" %>
 	<br>
-    <%= f.check_box :inshort, name: 'en bref' %><%= f.label :inshort, "en bref" %>
+    <%= f.check_box :inshort, {}, true, false %><%= f.label :inshort, "en bref" %>
     <br><br>
 	<%= f.submit %>
 <% end %>
