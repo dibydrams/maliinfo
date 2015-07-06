@@ -10,7 +10,7 @@
 	</div>
 </section>
 
-<section id="zone_carrousel">
+<section>
 	<div id="container_carrousel" class="shadow">
 		<ul class="carrousel">
 			<% @slides.each do |post| %>
@@ -21,7 +21,7 @@
 		</ul>
 	</div>
 
-	<% @whitepost.each do |post| %>
+	<% @firstpost.each do |post| %>
 		<div class="spotlight_article">
 			<div class="focus_effect"></div>
 
@@ -45,7 +45,6 @@
 			</div>			
 		</div>
 	<% end %>
-</section>
 
 <div id="spotlight">
 	<% @greenpost.each do |post| %>
@@ -122,7 +121,34 @@
 			</div>			
 		</div>
 	<% end %>
+
+	<% @otherposts.each do |post| %>
+		<div class="spotlight_article">
+			<div class="focus_effect"></div>
+
+			<div class="spotlight_article_title">
+				<h1>
+					<%= link_to truncate(post.title, length: 350, separator: ' '), post_path(post) %>
+				</h1>
+			</div>
+
+			<div class="spotlight_article_picture">
+				<%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 330, :height => 220, :crop => :fill), post_path(post) %>
+			</div>
+
+			<div class="spotlight_article_description">
+				<div class="spotlight_article_summary">
+					<%= link_to sanitize(post.content.truncate(200, separator: ' ')), post_path(post) %>
+				</div>
+				<div class="read_more">
+					<%= link_to 'lire la suite...', post_path(post) %>
+				</div>
+			</div>			
+		</div>
+	<% end %>
 </section>
+
+
 
 <section class="bloc_article">
 

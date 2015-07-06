@@ -9,13 +9,14 @@ class PostsController < ApplicationController
           format.html
           format.rss { render :layout => false }
 
-      @slides = Post.limit(5)
-      # @whitepost = Post.highlight.limit(1)
-      @whitepost = Post.limit(1).offset(0)
-      @greenpost = Post.limit(1).offset(1)
-      @yellowpost = Post.limit(1).offset(2)
-      @redpost = Post.limit(1).offset(3)
-      end
+    @slides = Post.limit(5)
+    # @whitepost = Post.highlight.limit(1)
+    @firstpost = Post.limit(1).offset(0)
+    @greenpost = Post.limit(1).offset(1)
+    @yellowpost = Post.limit(1).offset(2)
+    @redpost = Post.limit(1).offset(3)
+    @otherposts = Post.limit(6).offset(4)
+    end
   end
 
   def new
@@ -52,6 +53,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :picture, :picture_cache, :content, :tag_list, category_ids: [])
+    params.require(:post).permit(:title, :published_at, :content, :picture, :picture_cache, :tag_list, :spotlight, :inshort, category_ids: [])
   end
 end

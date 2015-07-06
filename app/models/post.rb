@@ -10,4 +10,5 @@ class Post < ActiveRecord::Base
 
   scope :highlight, -> {where(spotlight: true)}
   scope :downplay, -> {where(inshort: true)}
+  scope :news, -> {where(inshort: false, spotlight: false)}
 end
