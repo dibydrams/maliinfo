@@ -15,15 +15,15 @@
   </div>
 
 <div class="create_post_button">
-<%= link_to "retour", :back %>
+<%= link_to "Retour", :back %>
 </div>
 
 <% if user_signed_in? %>
   <div class="create_post_button">
-  <%= link_to "edit post", edit_post_path %>
+  <%= link_to "Éditer", edit_post_path %>
   </div>
 
   <div class="create_post_button">
-  <%= link_to "create post", new_post_path %>
+  <%= link_to "Nouveau", new_post_path %>
   </div>
 <% end %>

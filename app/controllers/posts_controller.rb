@@ -3,6 +3,8 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   
   def index
+    @tags = Post.highlight.limit(4)
+    @marquee = Post.highlight.limit(1)
     @posts = Post.all.order("published_at DESC")
 
     respond_to do |format|
@@ -21,6 +23,10 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @post.published_at = Time.now
+    @post.created_at = Time.now
+    @post.spotlight = false
+    @post.inshort = false
   end
 
   def create

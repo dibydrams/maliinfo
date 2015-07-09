@@ -1,12 +1,22 @@
 <section>
 	<div class="menu_tag">
-		<div class="tag_intro">
-			<p>En ce moment...</p>
-		</div>
+		<ul class="tag_list">
+			<div class="tag_intro">
+				<p>En ce moment...</p>
+			</div>
+			<% @tags.each do |post| %>
+				<li class="tags">
+						<%= link_to post.tag_list, post_path(post) %>
+				</li>
+			<% end %>
+		</ul>
 	</div>
 
 	<div class="marquee">
-		<marquee behavior="scroll" loop="10" Scrollamount="5" Scrolldelay="0.01" OnmouseOut="this.start();" OnMouseOver="this.stop();">allô</marquee>
+		<% @marquee.each do |post| %>
+			<p><%= link_to post.title, post_path(post) %></p>
+			<p><%= link_to post.title, post_path(post) %></p>
+		<% end %>
 	</div>
 </section>
 
