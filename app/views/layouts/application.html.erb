@@ -2,57 +2,58 @@
 <html>
 
 <head>
-	<title>Mali Info</title>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Site d'information dédié à l'actualité malienne" />
-	<meta name="keywords" content="mali, info, news, actu, actualité, politique" />
-	<meta name="author" content="Diby Drams" />
-	<%= favicon_link_tag 'favicon.ico' %>
-	<%= favicon_link_tag 'apple-touch-icon.png', rel: 'apple-touch-icon', type: 'image/png' %>
-	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-	<%= csrf_meta_tags %>
+  <title>Mali Info</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site d'information dédié à l'actualité malienne" />
+  <meta name="keywords" content="mali, info, news, actu, actualité, politique" />
+  <meta name="author" content="Diby Drams" />
+  <%= favicon_link_tag 'favicon.ico' %>
+  <%= favicon_link_tag 'apple-touch-icon.png', rel: 'apple-touch-icon', type: 'image/png' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= content_for?(:head) ? yield(:head) : '' %>
 </head>
 
 <body>
 
-	<nav class="menu">
+  <nav class="menu">
         <% unless @category %><li class='menu-selected'><a href="/">Accueil</a></li><% else %><li><a href="/">Accueil</a></li><% end %><% Category.all.each do |category| %><% if @category && @category.id == category.id %><li class='menu-selected'><%= link_to category.name, category_path(category) %></li><% else %><li><%= link_to category.name, category_path(category) %></li><% end %><% end %><li class="contact"><a href="/">Contact</a></li>
-	</nav>
+  </nav>
 
-	<div>
-		<section>
-			<div class="social_icons icon-effect">
-				<a href="https://www.facebook.com/maliinfo" target="_blank" class="icon icon-fb">Facebook</a>
-				<div class="clear"></div>
-				<a href="https://www.youtube.com/user/InfoMali" target="_blank" class="icon icon-yt">YouTube</a>
-				<div class="clear"></div>
-				<a href="https://twitter.com/maliinfo" target="_blank" class="icon icon-tw">Twitter</a>
-				<div class="clear"></div>
-				<a href="#" target="_blank" class="icon icon-rss">Flux RSS</a>
-			</div>
-		</section>
+  <div>
+    <section>
+      <div class="social_icons icon-effect">
+        <a href="https://www.facebook.com/maliinfo" target="_blank" class="icon icon-fb">Facebook</a>
+        <div class="clear"></div>
+        <a href="https://www.youtube.com/user/InfoMali" target="_blank" class="icon icon-yt">YouTube</a>
+        <div class="clear"></div>
+        <a href="https://twitter.com/maliinfo" target="_blank" class="icon icon-tw">Twitter</a>
+        <div class="clear"></div>
+        <a href="#" target="_blank" class="icon icon-rss">Flux RSS</a>
+      </div>
+    </section>
 
-			<% if notice %>
-			  <p class="alert alert-success"><%= notice %></p>
-			<% end %>
-			<% if alert %>
-			  <p class="alert alert-danger"><%= alert %></p>
-			<% end %>
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
 
-			<%= yield %>
+      <%= yield %>
 
-		<!-- <section class="container bubblingG">
-			<span id="bubblingG_1">
-			</span>
-			<span id="bubblingG_2">
-			</span>
-			<span id="bubblingG_3">
-			</span>
-		</section> -->
-	</div>
+    <!-- <section class="container bubblingG">
+      <span id="bubblingG_1">
+      </span>
+      <span id="bubblingG_2">
+      </span>
+      <span id="bubblingG_3">
+      </span>
+    </section> -->
+  </div>
 
 </body>
 

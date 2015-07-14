@@ -1,18 +1,42 @@
+<% content_for :head do %>
+  <meta property="fb:app_id" content="1664574203776987" />
+  <meta property="og:type"   content="maliinfo:post" />
+  <meta property="og:url"    content="<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>" />
+  <meta property="og:title"  content="<%=@post.title%>" />
+  <meta property="og:description" content="<%= strip_tags(@post.content) %>" />
+  <meta property="og:image" content="<%=@post.picture_url(:thumbnail)%>" />
+  <meta property="og:site_name" content="Mali Info" />
+<% end %>
 
-  <div class="article_page">
-    <div class="article_page_title">
-      <%= @post.title %>
-      <br><br>
-    </div>
-
-    <div class="article_page_picture">
-      <%= cl_image_tag(@post.picture_url(:standard), :width => 630, :height => 420) %>
-    </div>
-
-    <div class="article_content">
-      <%= raw(@post.content) %>
-    </div>
+<div class="article_page">
+  <div class="article_page_title">
+    <%= @post.title %>
+    <br><br>
   </div>
+
+  <div class="article_page_picture">
+    <%= cl_image_tag(@post.picture_url(:standard), :width => 630, :height => 420) %>
+  </div>
+
+  <div class="article_content">
+    <%= raw(@post.content) %>
+  </div>
+</div>
+
+<div class="icon-effect">
+  <a href='http://www.facebook.com/sharer.php?u=<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>' target="_blank" class="icon icon-fb">Facebook</a>
+</div>
+
+<a href="http://www.facebook.com/sharer.php?u=<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>&picture=<%= @post.picture_url(:standard) %>&name=<%= @post.title %>&description=<%= @post.content %>&redirect_uri=http://maliinfo.herokuapp.com/<%= request.original_url %>&display=popup" target=’_blank’>Share</a>
+
+<!-- Twitter -->
+<a href="http://twitter.com/home?status=SHAREMESSAGE" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
+ <!-- Facebook -->
+<a href="https://www.facebook.com/sharer/sharer.php?u=SHAREMESSAGE" title="Share on Facebook" target="_blank" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
+<!-- Google+ -->
+<a href="https://plus.google.com/share?url=SHAREMESSAGE" title="Share on Google+" target="_blank" class="btn btn-googleplus"><i class="fa fa-google-plus"></i> Google+</a>
+<!-- LinkedIn -->
+<a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=SHAREMESSAGE" title="Share on LinkedIn" target="_blank" class="btn btn-linkedin"><i class="fa fa-linkedin"></i> LinkedIn</a>
 
 <div class="create_post_button">
 <%= link_to "Retour", :back %>
