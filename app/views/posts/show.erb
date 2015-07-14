@@ -1,7 +1,7 @@
 <% content_for :head do %>
   <meta property="og:title" content="Titre d'article" />
   <meta property="og:site_name" content="Mali Info" />
-  <meta property="og:url" content="http://www.mali-info.net/"/>
+  <meta property="og:url" content="<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>"/>
   <meta property="og:image" content="http://res.cloudinary.com/hd2c0qxh2/image/upload/c_fill,g_north,h_420,w_630/v1436183452/vbnhg2i71zfwrxrtgmrp.jpg"/>
   <meta property="og:type" content="ecommerce"/>
 <% end %>
