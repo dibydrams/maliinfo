@@ -1,161 +1,172 @@
-<section>
-	<div class="menu_tag">
-		<ul class="tag_list">
-			<div class="tag_intro">
-				<p>En ce moment...</p>
-			</div>
-			<% @tags.each do |post| %>
-				<li class="tags">
-						<%= link_to post.tag_list, post_path(post) %>
-				</li>
-			<% end %>
-		</ul>
-	</div>
+<% content_for :head do %>
+  <meta property="og:url" content="http://mali-info.net"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Mali Info" />
+  <meta property="og:image" content="http://res.cloudinary.com/hd2c0qxh2/image/upload/c_fill,g_north,h_420,w_630/v1436183452/vbnhg2i71zfwrxrtgmrp.jpg"/>
+  <meta name="description" content="Site d'information dédié à l'actualité malienne" />
+  <meta property="og:site_name" content="Mali Info" />
+  <meta property="og:type" content="website"/>
+  <meta name="keywords" content="mali, info, news, actu, actualité, politique" />
+<% end %>
 
-	<div class="marquee">
-		<% @marquee.each do |post| %>
-			<p><%= link_to post.title, post_path(post) %></p>
-			<p><%= link_to post.title, post_path(post) %></p>
-		<% end %>
-	</div>
+<section>
+  <div class="menu_tag">
+    <ul class="tag_list">
+      <div class="tag_intro">
+        <p>En ce moment...</p>
+      </div>
+      <% @tags.each do |post| %>
+        <li class="tags">
+            <%= link_to post.tag_list, post_path(post) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="marquee">
+    <% @marquee.each do |post| %>
+      <p><%= link_to post.title, post_path(post) %></p>
+      <p><%= link_to post.title, post_path(post) %></p>
+    <% end %>
+  </div>
 </section>
 
 <section>
-	<div id="container_carrousel" class="shadow">
-		<ul class="carrousel">
-			<% @slides.each do |post| %>
-				<li>
-					<%= link_to cl_image_tag(post.picture_url(:standard), :width => 630, :height => 420, :crop => :fill), post_path(post) %>
-				</li>
-			<% end %>
-		</ul>
-	</div>
+  <div id="container_carrousel" class="shadow">
+    <ul class="carrousel">
+      <% @slides.each do |post| %>
+        <li>
+          <%= link_to cl_image_tag(post.picture_url(:standard), :width => 630, :height => 420, :crop => :fill), post_path(post) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 
-	<% @firstpost.each do |post| %>
-		<div class="spotlight_article">
-			<div class="focus_effect"></div>
+  <% @firstpost.each do |post| %>
+    <div class="spotlight_article">
+      <div class="focus_effect"></div>
 
-			<div class="spotlight_article_title">
-				<h1>
-					<%= link_to truncate(post.title, length: 350, separator: ' '), post_path(post) %>
-				</h1>
-			</div>
+      <div class="spotlight_article_title">
+        <h1>
+          <%= link_to truncate(post.title, length: 350, separator: ' '), post_path(post) %>
+        </h1>
+      </div>
 
-			<div class="spotlight_article_picture">
-				<%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 330, :height => 220, :crop => :fill), post_path(post) %>
-			</div>
+      <div class="spotlight_article_picture">
+        <%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 330, :height => 220, :crop => :fill), post_path(post) %>
+      </div>
 
-			<div class="spotlight_article_description">
-				<div class="spotlight_article_summary">
-					<%= link_to sanitize(post.content.truncate(200, separator: ' ')), post_path(post) %>
-				</div>
-				<div class="read_more">
-					<%= link_to 'lire la suite...', post_path(post) %>
-				</div>
-			</div>			
-		</div>
-	<% end %>
+      <div class="spotlight_article_description">
+        <div class="spotlight_article_summary">
+          <%= link_to sanitize(post.content.truncate(200, separator: ' ')), post_path(post) %>
+        </div>
+        <div class="read_more">
+          <%= link_to 'lire la suite...', post_path(post) %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 
 <div id="spotlight">
-	<% @greenpost.each do |post| %>
-		<div class="spotlight_article_green">
-			<div class="focus_effect_green"></div>
+  <% @greenpost.each do |post| %>
+    <div class="spotlight_article_green">
+      <div class="focus_effect_green"></div>
 
-			<div class="spotlight_article_green_title">
-				<h1>
-					<%= link_to post.title, post_path(post) %>
-				</h1>
-			</div>
+      <div class="spotlight_article_green_title">
+        <h1>
+          <%= link_to post.title, post_path(post) %>
+        </h1>
+      </div>
 
-			<div class="spotlight_article_green_picture">
-				<%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 330, :height => 220, :crop => :fill), post_path(post) %>
-			</div>
+      <div class="spotlight_article_green_picture">
+        <%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 330, :height => 220, :crop => :fill), post_path(post) %>
+      </div>
 
-			<div class="spotlight_article_green_description">
-				<div class="spotlight_article_green_summary">
-					<%= link_to sanitize(post.content.truncate(200, separator: ' ')), post_path(post) %>
-				</div>
-				<div class="read_more_green">
-					<%= link_to 'lire la suite...', post_path(post) %>
-				</div>
-			</div>			
-		</div>
-	<% end %>
+      <div class="spotlight_article_green_description">
+        <div class="spotlight_article_green_summary">
+          <%= link_to sanitize(post.content.truncate(200, separator: ' ')), post_path(post) %>
+        </div>
+        <div class="read_more_green">
+          <%= link_to 'lire la suite...', post_path(post) %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 
-	<% @yellowpost.each do |post| %>
-		<div class="spotlight_article_yellow">
-			<div class="focus_effect_yellow"></div>
+  <% @yellowpost.each do |post| %>
+    <div class="spotlight_article_yellow">
+      <div class="focus_effect_yellow"></div>
 
-			<div class="spotlight_article_yellow_title">
-				<h1>
-					<%= link_to post.title, post_path(post) %>
-				</h1>
-			</div>
+      <div class="spotlight_article_yellow_title">
+        <h1>
+          <%= link_to post.title, post_path(post) %>
+        </h1>
+      </div>
 
-			<div class="spotlight_article_yellow_picture">
-				<%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 330, :height => 220, :crop => :fill), post_path(post) %>
-			</div>
+      <div class="spotlight_article_yellow_picture">
+        <%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 330, :height => 220, :crop => :fill), post_path(post) %>
+      </div>
 
-			<div class="spotlight_article_yellow_description">
-				<div class="spotlight_article_yellow_summary">
-					<%= link_to sanitize(post.content.truncate(200, separator: ' ')), post_path(post) %>
-				</div>
-				<div class="read_more_yellow">
-					<%= link_to 'lire la suite...', post_path(post) %>
-				</div>
-			</div>			
-		</div>
-	<% end %>
+      <div class="spotlight_article_yellow_description">
+        <div class="spotlight_article_yellow_summary">
+          <%= link_to sanitize(post.content.truncate(200, separator: ' ')), post_path(post) %>
+        </div>
+        <div class="read_more_yellow">
+          <%= link_to 'lire la suite...', post_path(post) %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 
-	<% @redpost.each do |post| %>
-		<div class="spotlight_article_red">
-			<div class="focus_effect_red"></div>
-			
-			<div class="spotlight_article_red_title">
-				<h1>
-					<%= link_to post.title, post_path(post) %>
-				</h1>
-			</div>
+  <% @redpost.each do |post| %>
+    <div class="spotlight_article_red">
+      <div class="focus_effect_red"></div>
 
-			<div class="spotlight_article_red_picture">
-				<%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 330, :height => 220, :crop => :fill), post_path(post) %>
-			</div>
+      <div class="spotlight_article_red_title">
+        <h1>
+          <%= link_to post.title, post_path(post) %>
+        </h1>
+      </div>
 
-			<div class="spotlight_article_red_description">
-				<div class="spotlight_article_red_summary">
-					<%= link_to sanitize(post.content.truncate(200, separator: ' ')), post_path(post) %>
-				</div>
-				<div class="read_more_red">
-					<%= link_to 'lire la suite...', post_path(post) %>
-				</div>
-			</div>			
-		</div>
-	<% end %>
+      <div class="spotlight_article_red_picture">
+        <%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 330, :height => 220, :crop => :fill), post_path(post) %>
+      </div>
 
-	<% @otherposts.each do |post| %>
-		<div class="spotlight_article">
-			<div class="focus_effect"></div>
+      <div class="spotlight_article_red_description">
+        <div class="spotlight_article_red_summary">
+          <%= link_to sanitize(post.content.truncate(200, separator: ' ')), post_path(post) %>
+        </div>
+        <div class="read_more_red">
+          <%= link_to 'lire la suite...', post_path(post) %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 
-			<div class="spotlight_article_title">
-				<h1>
-					<%= link_to truncate(post.title, length: 350, separator: ' '), post_path(post) %>
-				</h1>
-			</div>
+  <% @otherposts.each do |post| %>
+    <div class="spotlight_article">
+      <div class="focus_effect"></div>
 
-			<div class="spotlight_article_picture">
-				<%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 330, :height => 220, :crop => :fill), post_path(post) %>
-			</div>
+      <div class="spotlight_article_title">
+        <h1>
+          <%= link_to truncate(post.title, length: 350, separator: ' '), post_path(post) %>
+        </h1>
+      </div>
 
-			<div class="spotlight_article_description">
-				<div class="spotlight_article_summary">
-					<%= link_to sanitize(post.content.truncate(200, separator: ' ')), post_path(post) %>
-				</div>
-				<div class="read_more">
-					<%= link_to 'lire la suite...', post_path(post) %>
-				</div>
-			</div>			
-		</div>
-	<% end %>
+      <div class="spotlight_article_picture">
+        <%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 330, :height => 220, :crop => :fill), post_path(post) %>
+      </div>
+
+      <div class="spotlight_article_description">
+        <div class="spotlight_article_summary">
+          <%= link_to sanitize(post.content.truncate(200, separator: ' ')), post_path(post) %>
+        </div>
+        <div class="read_more">
+          <%= link_to 'lire la suite...', post_path(post) %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </section>
 
 
@@ -164,37 +175,37 @@
 
 <ul>
 <% @posts.each do |post| %>
-	<li>
-		<div class="article">
-			<div class"focus_effect">
-				<div class="article_title">
-					<h1>
-						<%= link_to post.title, post_path(post) %>
-					</h1>
-				</div>
-			</div>
+  <li>
+    <div class="article">
+      <div class"focus_effect">
+        <div class="article_title">
+          <h1>
+            <%= link_to post.title, post_path(post) %>
+          </h1>
+        </div>
+      </div>
 
-			<div class="article_picture">
-				<%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 300, :height => 200, :crop => :fill), post_path(post) %>
-			</div>
+      <div class="article_picture">
+        <%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 300, :height => 200, :crop => :fill), post_path(post) %>
+      </div>
 
-			<div class="article_description">
-				<div class="article_summary">
-					<%= link_to sanitize(post.content.truncate(350, separator: ' ')), post_path(post) %>
-				</div>
-				<div class="read_more">
-					<%= link_to 'lire la suite...', post_path(post) %>
-				</div>
-			</div>
-		</div>
-	</li>
+      <div class="article_description">
+        <div class="article_summary">
+          <%= link_to sanitize(post.content.truncate(350, separator: ' ')), post_path(post) %>
+        </div>
+        <div class="read_more">
+          <%= link_to 'lire la suite...', post_path(post) %>
+        </div>
+      </div>
+    </div>
+  </li>
 <% end %>
 </ul>
 
 <% if user_signed_in? %>
-	<div class="create_post_button">
-	  <%= link_to "Nouveau", new_post_path %>
-	</div>
+  <div class="create_post_button">
+    <%= link_to "Nouveau", new_post_path %>
+  </div>
 <% end %>
 
 
