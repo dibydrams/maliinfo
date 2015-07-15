@@ -1,11 +1,10 @@
 <% content_for :head do %>
-  <meta property="og:url" content="<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="<%=@post.title%> | Mali Info" />
-  <meta property="og:image" content="<%=@post.picture_url(:standard)%>"/>
-  <meta property="og:description" content="<%= strip_tags(@post.content) %>" />
-  <meta property="og:site_name" content="Mali Info" />
-  <meta property="og:type" content="website"/>
+  <meta prefix="og: http://ogp.me/ns#" property="og:url" content="<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>"/>
+  <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website"/>
+  <meta prefix="og: http://ogp.me/ns#" property="og:title" content="<%=@post.title%> | Mali Info" />
+  <meta prefix="og: http://ogp.me/ns#" property="og:image" content="<%=@post.picture_url(:standard)%>"/>
+  <meta prefix="og: http://ogp.me/ns#" property="og:description" content="<%= strip_tags(@post.content) %>" />
+  <meta prefix="og: http://ogp.me/ns#" property="og:site_name" content="Mali Info" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@MaliInfo" />
 <% end %>
