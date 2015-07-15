@@ -1,13 +1,14 @@
 <% content_for :head do %>
   <meta property="og:url" content="<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="<%=@post.title%>" />
-  <meta property="og:image" content="http://res.cloudinary.com/hd2c0qxh2/image/upload/c_fill,g_north,h_420,w_630/v1436183452/vbnhg2i71zfwrxrtgmrp.jpg"/>
+  <meta property="og:title" content="<%=@post.title%> | Mali Info" />
+  <meta property="og:image" content="<%=@post.picture_url(:thumbnail)%>"/>
   <meta property="og:description" content="<%= strip_tags(@post.content) %>" />
   <meta property="og:site_name" content="Mali Info" />
   <meta property="og:type" content="website"/>
 <% end %>
 
+<section class="show_article">
 <div class="article_page">
   <div class="article_page_title">
     <%= @post.title %>
@@ -23,20 +24,16 @@
   </div>
 </div>
 
-<div class="icon-effect">
-  <a href='http://www.facebook.com/sharer.php?u=<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>' target="_blank" class="icon icon-fb">Facebook</a>
+<div class="news_title">
+  <h2>Partagez cette article sur...</h2>
 </div>
 
-<a href="http://www.facebook.com/sharer.php?u=<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>&picture=<%= @post.picture_url(:standard) %>&name=<%= @post.title %>&description=<%= @post.content %>&redirect_uri=http://maliinfo.herokuapp.com/<%= request.original_url %>&display=popup" target=’_blank’>Share</a>
-
-<!-- Twitter -->
-<a href="http://twitter.com/home?status=SHAREMESSAGE" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
- <!-- Facebook -->
-<a href="https://www.facebook.com/sharer/sharer.php?u=SHAREMESSAGE" title="Share on Facebook" target="_blank" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
-<!-- Google+ -->
-<a href="https://plus.google.com/share?url=SHAREMESSAGE" title="Share on Google+" target="_blank" class="btn btn-googleplus"><i class="fa fa-google-plus"></i> Google+</a>
-<!-- LinkedIn -->
-<a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=SHAREMESSAGE" title="Share on LinkedIn" target="_blank" class="btn btn-linkedin"><i class="fa fa-linkedin"></i> LinkedIn</a>
+<div class="icon-effect">
+  <a href='http://www.facebook.com/sharer.php?u=<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>' target="_blank" class="icon icon-fb">Facebook</a>
+  <a href="http://twitter.com/home?status=<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>" target="_blank" class="icon icon-tw">Twitter</a>
+  <a href='https://plus.google.com/share?url=<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>' target="_blank" class="icon icon-gp">Google+</a>
+  <a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>" target="_blank" class="icon icon-lk fa fa-linkedin">LinkedIn</a>
+</div>
 
 <div class="create_post_button">
 <%= link_to "Retour", :back %>
@@ -51,3 +48,28 @@
   <%= link_to "Nouveau", new_post_path %>
   </div>
 <% end %>
+</section>
+
+<aside>
+  <div class="news">
+      <div class="news_title">
+        <h2>Actualité</h2>
+      </div>
+      <div class="news_content">
+        <ul>
+          <% @news.each do |post| %>
+            <li>
+              <div class="news_article">
+                <div class="news_article_picture">
+                  <%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 60, :height => 40, :crop => :fill), post_path(post) %>
+                </div>
+                <div class="news_article_title">
+                  <%= link_to post.title, post_path(post) %>
+                </div>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+  </div>
+</aside>

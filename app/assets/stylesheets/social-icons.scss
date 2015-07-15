@@ -77,24 +77,46 @@
 	box-shadow: 0 0 0 4px #cd1820;
 }
 
+.icon-gp {
+	color: #fff;
+	background-color: #dd4b39;
+	box-shadow: 0 0 0 4px #dd4b39;
+}
+
+.icon-lk {
+	color: #fff;
+	background-color: #287bbc;
+	box-shadow: 0 0 0 4px #287bbc;
+}
+
 .icon-fb:hover {
 	color: #2e679b;
-	background-color: rgba(255,255,255,0);
+	background-color: rgba(255,255,255,1);
 }
 
 .icon-rss:hover {
 	color: #ed7225;
-	background-color: rgba(255,255,255,0);
+	background-color: rgba(255,255,255,1);
 }
 
 .icon-tw:hover {
 	color: #2fa9e1;
-	background-color: rgba(255,255,255,0);
+	background-color: rgba(255,255,255,1);
 }
 
 .icon-yt:hover {
 	color: #cd1820;
-	background-color: rgba(255,255,255,0);
+	background-color: rgba(255,255,255,1);
+}
+
+.icon-gp:hover {
+	color: #dd4b39;
+	background-color: rgba(255,255,255,1);
+}
+
+.icon-lk:hover {
+	color: #287bbc;
+	background-color: rgba(255,255,255,1);
 }
 
 .icon-fb:before {
@@ -113,6 +135,14 @@
 	content: "\e603";
 }
 
+.icon-gp:before {
+	content: "\e604";
+}
+
+.icon-lk:before {
+	content: "\e605";
+}
+
 .icon-fb:after {
 	border: 4px dashed #2e679b;
 }
@@ -127,6 +157,14 @@
 
 .icon-yt:after {
 	border: 4px dashed #cd1820;
+}
+
+.icon-gp:after {
+	border: 4px dashed #dd4b39;
+}
+
+.icon-lk:after {
+	border: 4px dashed #287bbc;
 }
 
 .icon-effect .icon {

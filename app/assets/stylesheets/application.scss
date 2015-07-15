@@ -771,6 +771,16 @@ aside {
 	width: 14.8em;
 }
 
+/*** PAGE ARTICLE ***/
+
+.show_article {
+	display: block;
+	width: 630px;
+	margin-left: 12em;
+	margin-right: 3em;
+	float: left;
+}
+
 /*** BOUTON ***/
 .create_post_button a {
 	display:block;
@@ -941,7 +951,7 @@ input[type="submit"]:hover {
 	width: 630px;
 	margin-bottom: 1em;
 	padding-bottom: 1em;
-	border-bottom: 0.05em solid black;
+	border-bottom: 0.05em solid #C0C0C0;
 	text-decoration: none;
 	font-family: 'Raleway', Helvetica, Arial, Verdana, sans-serif;
 	font-weight: bold;

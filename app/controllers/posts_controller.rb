@@ -54,6 +54,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.friendly.find(params[:id])
+    @news = Post.limit(7).order("published_at DESC")
   end
 
   private
