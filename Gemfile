@@ -26,15 +26,12 @@ gem 'spring',        group: :development
 
 gem 'carrierwave'
 gem 'cloudinary'
-
 gem 'acts-as-taggable-on'
-
 gem 'wysiwyg-rails'
 gem 'font-awesome-rails'
-
 gem 'devise'
-
 gem 'friendly_id', '~> 5.1.0'
+gem 'will_paginate', '~> 3.0.6'
 
 group :development, :test do
   gem 'dotenv'

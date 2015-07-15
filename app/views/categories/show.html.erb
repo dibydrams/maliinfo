@@ -1,5 +1,9 @@
 <section class="bloc_article">
 
+<div class="digg_pagination">
+  <%= will_paginate @posts, :container => false, :previous_label => "Précédent", :next_label => "Suivant" %>
+</div>
+
 <ul>
 <% @posts.each do |post| %>
   <li>
@@ -26,6 +30,10 @@
   </li>
 <% end %>
 </ul>
+
+<div class="digg_pagination">
+  <%= will_paginate @posts, :container => false, :previous_label => "Précédent", :next_label => "Suivant" %>
+</div>
 
 <div class="create_post_button">
 <%= link_to "Nouveau", new_post_path %>
@@ -56,3 +64,5 @@
       </div>
   </div>
 </aside>
+
+

@@ -2,10 +2,12 @@
   <meta property="og:url" content="<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="<%=@post.title%> | Mali Info" />
-  <meta property="og:image" content="<%=@post.picture_url(:thumbnail)%>"/>
+  <meta property="og:image" content="<%=@post.picture_url(:standard)%>"/>
   <meta property="og:description" content="<%= strip_tags(@post.content) %>" />
   <meta property="og:site_name" content="Mali Info" />
   <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@MaliInfo" />
 <% end %>
 
 <section class="show_article">
@@ -25,7 +27,7 @@
 </div>
 
 <div class="news_title">
-  <h2>Partagez cette article sur...</h2>
+  <h2>Partagez cet article sur...</h2>
 </div>
 
 <div class="icon-effect">
