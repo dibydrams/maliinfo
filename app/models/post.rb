@@ -8,6 +8,8 @@ class Post < ActiveRecord::Base
   has_many :post_categories
   has_many :categories, through: :post_categories
 
+  scope :flashinfo, -> {where(flash: true)}
+  scope :slideshow, -> {where(carousel: true)}
   scope :highlight, -> {where(spotlight: true)}
   scope :downplay, -> {where(inshort: true)}
   scope :news, -> {where(inshort: false, spotlight: false)}

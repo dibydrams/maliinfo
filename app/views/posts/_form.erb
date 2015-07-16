@@ -1,34 +1,37 @@
 <%= form_for(@post) do |f| %>
-	<%= f.label :title, "Titre" %>
-	<br>
-	<%= f.text_field(:title, size: 93) %>
-	<br><br>
-	<%= f.label :published_at, "Publié le" %>
-	<br>
-	<%= f.date_field(:published_at) %>
-	<br><br>
-	<%= f.label :content, "Texte" %>
-	<br>
-	<%= f.text_area(:content, size: "67x20") %>
-	<br><br>
-	<%= f.label :picture, "Ajouter une image" %>
-	<br>
-	<%= f.hidden_field(:picture_cache) %>
-    <%= f.file_field(:picture) %>
-	<br><br>
-    <%= f.label :category, "Catégorie" %>
-	<br>
-    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
-    <br><br>
-    <%= f.label :tag_list, "Tags" %>
-	<br>
-    <%= f.text_field(:tag_list, size: 93) %>
-	<br><br>
-	Mise en avant
-	<br>
-	<%= f.check_box :spotlight, {}, "true", "false" %><%= f.label :spotlight, "à la une" %>
-	<br>
-    <%= f.check_box :inshort, {}, "true", "false" %><%= f.label :inshort, "en bref" %>
-    <br><br>
-	<%= f.submit "Enregistrer" %>
+  <%= f.label :title, "Titre" %>
+  <br>
+  <%= f.text_field(:title, size: 93) %>
+  <br><br>
+  <%= f.label :published_at, "Publié le" %>
+  <br>
+  <%= f.date_field(:published_at) %>
+  <br><br>
+  <%= f.label :content, "Texte" %>
+  <br>
+  <%= f.text_area(:content, size: "67x20") %>
+  <br><br>
+  <%= f.label :picture, "Ajouter une image" %>
+  <br>
+  <%= f.hidden_field(:picture_cache) %>
+  <%= f.file_field(:picture) %>
+  <br><br>
+  <%= f.label :category, "Catégorie" %>
+  <br>
+  <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
+  <br><br>
+  <%= f.label :tag_list, "Tags" %>
+  <br>
+  <%= f.text_field(:tag_list, size: 93) %>
+  <br><br>
+  <span class="form_title">Mise en avant</span>
+  <br>
+  <div class="emphasize_boxes">
+  <%= f.check_box :flash, {}, "true", "false" %><%= f.label :flash, "Flash Info" %>
+  <%= f.check_box :carousel, {}, "true", "false" %><%= f.label :carousel, "Carrousel" %>
+  <%= f.check_box :spotlight, {}, "true", "false" %><%= f.label :spotlight, "À la une" %>
+  <%= f.check_box :inshort, {}, "true", "false" %><%= f.label :inshort, "En bref" %>
+  </div>
+  <br><br>
+  <%= f.submit "Enregistrer" %>
 <% end %>
