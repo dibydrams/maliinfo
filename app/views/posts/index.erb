@@ -48,7 +48,7 @@
 
       <div class="spotlight_article_title">
         <h1>
-          <%= link_to truncate(post.title, length: 350, separator: ' '), post_path(post) %>
+          <%= link_to truncate(post.title, length: 90, separator: ' '), post_path(post) %>
         </h1>
       </div>
 
@@ -74,7 +74,7 @@
 
       <div class="spotlight_article_green_title">
         <h1>
-          <%= link_to post.title, post_path(post) %>
+          <%= link_to truncate(post.title, length: 90, separator: ' '), post_path(post) %>
         </h1>
       </div>
 
@@ -99,7 +99,7 @@
 
       <div class="spotlight_article_yellow_title">
         <h1>
-          <%= link_to post.title, post_path(post) %>
+          <%= link_to truncate(post.title, length: 90, separator: ' '), post_path(post) %>
         </h1>
       </div>
 
@@ -124,7 +124,7 @@
 
       <div class="spotlight_article_red_title">
         <h1>
-          <%= link_to post.title, post_path(post) %>
+          <%= link_to truncate(post.title, length: 90, separator: ' '), post_path(post) %>
         </h1>
       </div>
 
@@ -149,7 +149,7 @@
 
       <div class="spotlight_article_title">
         <h1>
-          <%= link_to truncate(post.title, length: 350, separator: ' '), post_path(post) %>
+          <%= link_to truncate(post.title, length: 90, separator: ' '), post_path(post) %>
         </h1>
       </div>
 
