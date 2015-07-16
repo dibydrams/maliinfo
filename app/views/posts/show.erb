@@ -13,7 +13,10 @@
 <div class="article_page">
   <div class="article_page_title">
     <%= @post.title %>
-    <br><br>
+  </div>
+
+  <div class="article_page_date">
+    <%= @post.published_at.strftime("%d/%m/%Y") %>
   </div>
 
   <div class="article_page_picture">
@@ -33,7 +36,7 @@
   <a href='http://www.facebook.com/sharer.php?u=<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>' target="_blank" class="icon icon-fb">Facebook</a>
   <a href="http://twitter.com/home?status=<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>" target="_blank" class="icon icon-tw">Twitter</a>
   <a href='https://plus.google.com/share?url=<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>' target="_blank" class="icon icon-gp">Google+</a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>" target="_blank" class="icon icon-lk fa fa-linkedin">LinkedIn</a>
+  <a href="http://www.linkedin.com/shareArticle?mini=true&url=<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>&title=&summary=" target="_blank" class="icon icon-lk fa fa-linkedin">LinkedIn</a>
 </div>
 
 <div class="create_post_button">
@@ -65,7 +68,10 @@
                   <%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 60, :height => 40, :crop => :fill), post_path(post) %>
                 </div>
                 <div class="news_article_title">
-                  <%= link_to post.title, post_path(post) %>
+                  <%= link_to truncate(post.title, length: 350, separator: ' '), post_path(post) %>
+                  <div class="news_article_date">
+                    <%= link_to post.published_at.strftime("%d/%m/%Y"), post_path(post) %>
+                  </div>
                 </div>
               </div>
             </li>
