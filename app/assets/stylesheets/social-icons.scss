@@ -1,241 +1,410 @@
 @font-face {
-	font-family: 'Social Icon';
-	src:asset-url('social-icons.eot');
-	src:asset-url('social-icons.eot?#iefix') format('embedded-opentype'),
-	asset-url('social-icons.woff') format('woff'),
-	asset-url('social-icons.ttf') format('truetype'),
-	asset-url('social-icons.svg#ecoicon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'Social Icon';
+  src:asset-url('social-icons.eot');
+  src:asset-url('social-icons.eot?#iefix') format('embedded-opentype'),
+  asset-url('social-icons.woff') format('woff'),
+  asset-url('social-icons.ttf') format('truetype'),
+  asset-url('social-icons.svg#ecoicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 .icon {
-	display: inline-block;
-	font-size: 0px;
-	cursor: pointer;
-	margin: 10px 10px;
-	width: 65px;
-	height: 65px;
-	border-radius: 50%;
-	text-align: center;
-	position: relative;
-	z-index: 1;
-	color: #000;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-size: 0px;
+  cursor: pointer;
+  margin: 10px 10px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon:after {
-	pointer-events: none;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	content: '';
-	-webkit-box-sizing: content-box; 
-	-moz-box-sizing: content-box; 
-	box-sizing: content-box;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: '';
+  -webkit-box-sizing: content-box; 
+  -moz-box-sizing: content-box; 
+  box-sizing: content-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon:before {
-	font-family: 'Social Icon';
-	speak: none;
-	font-size: 45px;
-	line-height: 65px;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	display: block;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-family: 'Social Icon';
+  speak: none;
+  font-size: 45px;
+  line-height: 65px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-fb {
-	color: #fff;
-	background-color: #2e679b;
-	box-shadow: 0 0 0 4px #2e679b;
+  color: #fff;
+  background-color: #2e679b;
+  box-shadow: 0 0 0 4px #2e679b;
 }
 
 .icon-rss {
-	color: #fff;
-	background-color: #ed7225;
-	box-shadow: 0 0 0 4px #ed7225;
+  color: #fff;
+  background-color: #ed7225;
+  box-shadow: 0 0 0 4px #ed7225;
 }
 
 .icon-tw {
-	color: #fff;
-	background-color: #2fa9e1;
-	box-shadow: 0 0 0 4px #2fa9e1;
+  color: #fff;
+  background-color: #2fa9e1;
+  box-shadow: 0 0 0 4px #2fa9e1;
 }
 
 .icon-yt {
-	color: #fff;
-	background-color: #cd1820;
-	box-shadow: 0 0 0 4px #cd1820;
+  color: #fff;
+  background-color: #cd1820;
+  box-shadow: 0 0 0 4px #cd1820;
 }
 
 .icon-gp {
-	color: #fff;
-	background-color: #dd4b39;
-	box-shadow: 0 0 0 4px #dd4b39;
+  color: #fff;
+  background-color: #dd4b39;
+  box-shadow: 0 0 0 4px #dd4b39;
 }
 
 .icon-lk {
-	color: #fff;
-	background-color: #287bbc;
-	box-shadow: 0 0 0 4px #287bbc;
+  color: #fff;
+  background-color: #287bbc;
+  box-shadow: 0 0 0 4px #287bbc;
 }
 
 .icon-fb:hover {
-	color: #2e679b;
-	background-color: rgba(255,255,255,1);
+  color: #2e679b;
+  background-color: rgba(255,255,255,1);
 }
 
 .icon-rss:hover {
-	color: #ed7225;
-	background-color: rgba(255,255,255,1);
+  color: #ed7225;
+  background-color: rgba(255,255,255,1);
 }
 
 .icon-tw:hover {
-	color: #2fa9e1;
-	background-color: rgba(255,255,255,1);
+  color: #2fa9e1;
+  background-color: rgba(255,255,255,1);
 }
 
 .icon-yt:hover {
-	color: #cd1820;
-	background-color: rgba(255,255,255,1);
+  color: #cd1820;
+  background-color: rgba(255,255,255,1);
 }
 
 .icon-gp:hover {
-	color: #dd4b39;
-	background-color: rgba(255,255,255,1);
+  color: #dd4b39;
+  background-color: rgba(255,255,255,1);
 }
 
 .icon-lk:hover {
-	color: #287bbc;
-	background-color: rgba(255,255,255,1);
+  color: #287bbc;
+  background-color: rgba(255,255,255,1);
 }
 
 .icon-fb:before {
-	content: "\e600";
+  content: "\e600";
 }
 
 .icon-rss:before {
-	content: "\e601";
+  content: "\e601";
 }
 
 .icon-tw:before {
-	content: "\e602";
+  content: "\e602";
 }
 
 .icon-yt:before {
-	content: "\e603";
+  content: "\e603";
 }
 
 .icon-gp:before {
-	content: "\e604";
+  content: "\e604";
 }
 
 .icon-lk:before {
-	content: "\e605";
+  content: "\e605";
 }
 
 .icon-fb:after {
-	border: 4px dashed #2e679b;
+  border: 4px dashed #2e679b;
 }
 
 .icon-rss:after {
-	border: 4px dashed #ed7225;
+  border: 4px dashed #ed7225;
 }
 
 .icon-tw:after {
-	border: 4px dashed #2fa9e1;
+  border: 4px dashed #2fa9e1;
 }
 
 .icon-yt:after {
-	border: 4px dashed #cd1820;
+  border: 4px dashed #cd1820;
 }
 
 .icon-gp:after {
-	border: 4px dashed #dd4b39;
+  border: 4px dashed #dd4b39;
 }
 
 .icon-lk:after {
-	border: 4px dashed #287bbc;
+  border: 4px dashed #287bbc;
 }
 
 .icon-effect .icon {
-	width: 65px;
-	height: 65px;
-	-webkit-transition: background 0.2s, color 0.2s;
-	-moz-transition: background 0.2s, color 0.2s;
-	transition: background 0.2s, color 0.2s;
+  width: 65px;
+  height: 65px;
+  -webkit-transition: background 0.2s, color 0.2s;
+  -moz-transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
 
 .icon-effect .icon:before {
-	line-height: 65px;
-	-webkit-transform: scale(0.8);
-	-moz-transform: scale(0.8);
-	-ms-transform: scale(0.8);
-	transform: scale(0.8);
-	opacity: 1;
-	-webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
-	-moz-transition: -moz-transform 0.2s, opacity 0.2s;
-	transition: transform 0.2s, opacity 0.2s;
+  line-height: 65px;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 1;
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
 }
 
 .icon-effect .icon:after {
-	top: -4px;
-	left: -4px;
-	padding: 0;
-	z-index: 10;
+  top: -4px;
+  left: -4px;
+  padding: 0;
+  z-index: 10;
 }
 
 .icon-effect .icon:hover {
-	box-shadow: 0 0 0 0 rgba(255,255,255,0);
-	-webkit-transition: box-shadow 0.2s;
-	-moz-transition: box-shadow 0.2s;
-	transition: box-shadow 0.2s;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  -webkit-transition: box-shadow 0.2s;
+  -moz-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
 }
 
 .icon-effect .icon:hover:after {
-	-webkit-animation: spinAround 9s linear infinite;
-	-moz-animation: spinAround 9s linear infinite;
-	animation: spinAround 9s linear infinite;
+  -webkit-animation: spinAround 9s linear infinite;
+  -moz-animation: spinAround 9s linear infinite;
+  animation: spinAround 9s linear infinite;
 }
 
 @-webkit-keyframes spinAround {
-	from {
-		-webkit-transform: rotate(0deg)
-	}
-	to {
-		-webkit-transform: rotate(360deg);
-	}
+  from {
+    -webkit-transform: rotate(0deg)
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 @-moz-keyframes spinAround {
-	from {
-		-moz-transform: rotate(0deg)
-	}
-	to {
-		-moz-transform: rotate(360deg);
-	}
+  from {
+    -moz-transform: rotate(0deg)
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
 }
 @keyframes spinAround {
-	from {
-		transform: rotate(0deg)
-	}
-	to {
-		transform: rotate(360deg);
-	}
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .icon-effect .icon:hover:before {
-	-webkit-transform: scale(1);
-	-moz-transform: scale(1);
-	-ms-transform: scale(1);
-	transform: scale(1);
-	opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+.icon2 {
+  display: inline-block;
+  font-size: 0px;
+  cursor: pointer;
+  margin: 15px 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 25%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.icon2:after {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25%;
+  content: '';
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.icon2:before {
+  font-family: 'Social Icon';
+  speak: none;
+  font-size: 24px;
+  line-height: 45px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon2-fb:before {
+  content: "\e600";
+}
+
+.icon2-rss:before {
+  content: "\e601";
+}
+
+.icon2-tw:before {
+  content: "\e602";
+}
+
+.icon2-yt:before {
+  content: "\e603";
+}
+
+.icon2-gp:before {
+  content: "\e604";
+}
+
+.icon2-lk:before {
+  content: "\e605";
+}
+
+.icon-effect2 {
+  text-align: center;
+  -webkit-transition: background 0.2s, color 0.2s;
+  -moz-transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s;
+}
+
+.icon-effect2 .icon2-fb {
+  background: rgba(46,103,155,.7);
+}
+
+.icon-effect2 .icon2-rss {
+  background: rgba(237,114,37,.7);
+}
+
+.icon-effect2 .icon2-tw {
+  background: rgba(47,169,225,.7);
+}
+
+.icon-effect2 .icon2-yt {
+  background: rgba(205,24,32,.7);
+}
+
+.icon-effect2 .icon2-gp {
+  background: rgba(221,75,57,.7);
+}
+
+.icon-effect2 .icon2-lk {
+  background: rgba(40,123,188,.7);
+}
+
+.icon-effect2 .icon2:after {
+  top: -4px;
+  left: -4px;
+  padding: 4px;
+  box-shadow: 0 0 0 4px #fff;
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+  -webkit-transform: scale(.8);
+  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+  -moz-transform: scale(.8);
+  -ms-transform: scale(.8);
+  transition: transform 0.2s, opacity 0.2s;
+  transform: scale(.8);
+  opacity: 0;
+}
+
+.icon-effect2 .icon2-fb:after {
+  box-shadow: 0 0 0 4px rgba(46,103,155,1);
+}
+
+.icon-effect2 .icon2-rss:after {
+  box-shadow: 0 0 0 4px rgba(237,114,37,1);
+}
+
+.icon-effect2 .icon2-tw:after {
+  box-shadow: 0 0 0 4px rgba(47,169,225,1);
+}
+
+.icon-effect2 .icon2-yt:after {
+  box-shadow: 0 0 0 4px rgba(205,24,32,1);
+}
+
+.icon-effect2 .icon2-gp:after {
+  box-shadow: 0 0 0 4px rgba(221,75,57,1);
+}
+
+.icon-effect2 .icon2-lk:after {
+  box-shadow: 0 0 0 4px rgba(40,123,188,1);
+}
+
+.icon-effect2 .icon2:hover {
+  color: white;
+}
+
+.icon-effect2 .icon2-fb:hover {
+  background: rgba(46,103,155,1);
+}
+
+.icon-effect2 .icon2-rss:hover {
+  background: rgba(237,114,37,1);
+}
+
+.icon-effect2 .icon2-tw:hover {
+  background: rgba(47,169,225,1);
+}
+
+.icon-effect2 .icon2-yt:hover {
+  background: rgba(205,24,32,1);
+}
+
+.icon-effect2 .icon2-gp:hover {
+  background: rgba(221,75,57,1);
+}
+
+.icon-effect2 .icon2-lk:hover {
+  background: rgba(40,123,188,1);
+}
+
+.icon-effect2 .icon2:hover:after {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
 }
