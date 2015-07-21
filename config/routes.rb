@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root 'posts#index'
   resources :posts, path: 'article'
   resources :categories, path: 'categorie', only: [:show]
+  get 'contact', to: 'messages#new', as: 'contact'
+  post 'contact', to: 'messages#create'
 end
