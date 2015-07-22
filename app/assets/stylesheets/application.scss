@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require_tree .
+ *= normalize.css
  *= require_self
  *= loading.css
  *= social-icons.css
@@ -913,6 +914,15 @@ aside {
   font-size: 1em;
 }
 
+.field input {
+  background-color: rgba(196, 231, 182, 1);
+  border: 0px solid rgba(255, 255, 255, 1);
+  margin: 0px 0 5px;
+  border-radius: 2px;
+  padding: 5px;
+  font-family: 'Raleway', Helvetica, Arial, Verdana, sans-serif;
+}
+
 input:focus {
     outline-color: #75d948;
   outline-style: auto;
@@ -1118,6 +1128,29 @@ label[for=post_category_ids_7] {
 .contact_form {
   display: block;
   width: 50%;
+}
+
+/*** FORMULAIRE LOGIN ***/
+.login_form {
+  display: block;
+  width: 300px;
+  margin: auto;
+}
+
+fieldset {
+  border: none;
+  text-align: center;
+}
+
+.login_form h2 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.login_form input[type="submit"] {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /*===============================================================================================================================FORMAT SMARTPHONE PORTRAIT========  MAX-WIDTH: 320PX  =============*/
