@@ -4,20 +4,20 @@ class PostsController < ApplicationController
   
   def index
     @tags = Post.highlight.limit(4)
-    @marquee = Post.highlight.limit(1)
+    @marquee = Post.flashinfo.limit(1)
     @posts = Post.all.order("published_at DESC")
 
     respond_to do |format|
           format.html
           format.rss { render :layout => false }
 
-    @slides = Post.limit(5)
+    @slides = Post.slideshow.limit(5)
     # @whitepost = Post.highlight.limit(1)
-    @firstpost = Post.limit(1).offset(0)
-    @greenpost = Post.limit(1).offset(1)
-    @yellowpost = Post.limit(1).offset(2)
-    @redpost = Post.limit(1).offset(3)
-    @otherposts = Post.limit(6).offset(4)
+    @firstpost = Post.highlight.limit(1).offset(0)
+    @greenpost = Post.highlight.limit(1).offset(1)
+    @yellowpost = Post.highlight.limit(1).offset(2)
+    @redpost = Post.highlight.limit(1).offset(3)
+    @otherposts = Post.news.limit(6)
     end
   end
 
