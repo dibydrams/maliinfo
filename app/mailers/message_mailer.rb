@@ -1,12 +1,11 @@
 class MessageMailer < ActionMailer::Base
 
-  default from: "Mali Info <noreply@maliinfo.herokuapp.com>"
-  default to: "Djibril Drame <maliinfovideo@gmail.com>"
+  default to: "Mali Info <maliinfovideo@gmail.com>"
 
   def new_message(message)
     @message = message
     
-    mail subject: "Message from #{message.name}"
+    mail(from: "#{message.name} <#{message.email}>", reply_to: "#{message.email}", subject: "[Formulaire de contact Mali Info] #{message.subject}")
   end
 
 end

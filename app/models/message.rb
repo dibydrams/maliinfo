@@ -4,12 +4,15 @@ class Message
   include ActiveModel::Conversion
   include ActiveModel::Validations
 
-  attr_accessor :name, :email, :content
+  attr_accessor :name, :email, :subject, :content
 
   validates :name,
     presence: true
 
   validates :email,
+    presence: true
+
+  validates :subject,
     presence: true
 
   validates :content,

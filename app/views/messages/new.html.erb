@@ -1,11 +1,22 @@
+<div class="contact_form_container">
+
+<div class="contact_form_picture">
+</div>
+
+<div class="contact_form">
+
 <%= form_for @message, url: contact_path do |message_form| %>
   <fieldset>
     <div class="field">
-      <%= message_form.text_field :name, placeholder: "Name" %>
+      <%= message_form.text_field :name, placeholder: "Nom" %>
     </div>
     
     <div class="field">
       <%= message_form.email_field :email, placeholder: "Email"%>
+    </div>
+
+    <div class="field">
+      <%= message_form.text_field :subject, placeholder: "Sujet" %>
     </div>
     
     <div class="field">
@@ -19,3 +30,7 @@
     </div>
   </fieldset>
 <% end %>
+
+</div>
+
+</div>

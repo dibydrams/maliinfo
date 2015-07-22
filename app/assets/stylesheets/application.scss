@@ -898,7 +898,7 @@ aside {
   box-shadow: 0 4.5em 2.5em -2.5em #ffd52f inset, 0 0.1em 0.2em #999;
 }
 
-/*** FORMULAIRE ***/
+/*** FORMULAIRE ARTICLE ***/
 .form {
   display: block;
   width: 670px;
@@ -1100,6 +1100,24 @@ label[for=post_category_ids_7] {
   font-style: normal;
   font-size: 0.7em;
   color: #4A4A4A;
+}
+
+/*** FORMULAIRE CONTACT ***/
+.contact_form_container {
+  display: block;
+  width: 75%;
+  max-width: 960px;
+  margin: auto;
+}
+
+.contact_form_picture img {
+  display: block;
+  width: 50%;
+}
+
+.contact_form {
+  display: block;
+  width: 50%;
 }
 
 /*===============================================================================================================================FORMAT SMARTPHONE PORTRAIT========  MAX-WIDTH: 320PX  =============*/
