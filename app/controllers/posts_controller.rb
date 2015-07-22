@@ -3,21 +3,21 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   
   def index
-    @tags = Post.highlight.limit(4)
-    @marquee = Post.flashinfo.limit(1)
+    @tags = Post.highlight.limit(4).order("published_at DESC")
+    @marquee = Post.flashinfo.limit(1).order("published_at DESC")
     @posts = Post.all.order("published_at DESC")
 
     respond_to do |format|
           format.html
           format.rss { render :layout => false }
 
-    @slides = Post.slideshow.limit(5)
+    @slides = Post.slideshow.limit(5).order("published_at DESC")
     # @whitepost = Post.highlight.limit(1)
-    @firstpost = Post.highlight.limit(1).offset(0)
-    @greenpost = Post.highlight.limit(1).offset(1)
-    @yellowpost = Post.highlight.limit(1).offset(2)
-    @redpost = Post.highlight.limit(1).offset(3)
-    @otherposts = Post.news.limit(6)
+    @firstpost = Post.highlight.limit(1).offset(0).order("published_at DESC")
+    @greenpost = Post.highlight.limit(1).offset(1).order("published_at DESC")
+    @yellowpost = Post.highlight.limit(1).offset(2).order("published_at DESC")
+    @redpost = Post.highlight.limit(1).offset(3).order("published_at DESC")
+    @otherposts = Post.news.limit(6).order("published_at DESC")
     end
   end
 
