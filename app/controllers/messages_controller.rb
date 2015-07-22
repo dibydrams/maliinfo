@@ -8,8 +8,7 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     
     if @message.valid?
-      require 'pry'; binding.pry
-      MessageMailer.new_message(@message).deliver
+      MessageMailer.new_message(@message).deliver_now
       redirect_to contact_path, notice: "Your messages has been sent."
     else
       flash[:alert] = "An error occurred while delivering this message."

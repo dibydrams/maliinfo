@@ -75,4 +75,15 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.action_mailer.default_url_options = { host: "maliinfo.herokuapp.com" }
+  config.action_mailer.smtp_settings = {
+  address: ENV["MAIL_SMTP"],
+  port: 587,
+  domain: ENV["MAIL_DOMAIN"],
+  user_name: ENV["MAIL_USERNAME"],
+  password: ENV["MAIL_PASSWORD"],
+  authentication: :plain,
+  enable_starttls_auto: true
+  }
 end

@@ -39,16 +39,12 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.smtp_settings = {
-  address: "smtp.gmail.com",
+  address: ENV["MAIL_SMTP"],
   port: 587,
-  domain: ENV["GMAIL_DOMAIN"],
-  user_name: ENV["GMAIL_USERNAME"],
-  password: ENV["GMAIL_PASSWORD"],
+  domain: ENV["MAIL_DOMAIN"],
+  user_name: ENV["MAIL_USERNAME"],
+  password: ENV["MAIL_PASSWORD"],
   authentication: :plain,
   enable_starttls_auto: true
-  }
-
-  config.action_mailer.default_url_options = {
-    host: "maliinfo.herokuapp.com"
   }
 end
