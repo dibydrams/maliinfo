@@ -649,10 +649,7 @@ img{
 }
 
 .article:hover .next,
-.spotlight_article:hover .next,
-.spotlight_article_green:hover .next,
-.spotlight_article_yellow:hover .next,
-.spotlight_article_red:hover .next {
+.spotlight_article:hover .next {
   background: rgba(0, 153, 255, 1);
   padding: 6px 34px 6px 14px !important;
 }
@@ -1171,6 +1168,56 @@ fieldset {
 .login_form input[type="submit"] {
   margin-right: auto;
   margin-left: auto;
+}
+
+/*** ALERTE ***/
+.alert {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+  font-weight: 500;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0 20px 10px 5px;
+  padding-top: 3px;
+  height: 37px;
+  line-height: 1.7em;
+  border: 2px solid;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+  font-family: 'Raleway', Helvetica, Arial, Verdana, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.alert:hover {
+  border: 2px solid transparent;
+  padding-top: 1;
+  font-size: 22px;
+  height: 37px;
+}
+
+.alert-success {
+  background: rgba(0, 129, 43, .1);
+  color: #00812b !important;
+}
+
+.alert-success:hover {
+  background: rgba(0, 129, 43, .3);
+}
+
+.alert-danger {
+  background: rgba(205, 17, 38, .1);
+  color: #cd1126 !important;
+}
+
+.alert-danger:hover {
+  background: rgba(205, 17, 38, .3);
 }
 
 /*===============================================================================================================================FORMAT SMARTPHONE PORTRAIT========  MAX-WIDTH: 320PX  =============*/
