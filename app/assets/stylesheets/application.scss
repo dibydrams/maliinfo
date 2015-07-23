@@ -603,9 +603,10 @@ img{
 }
 
 .article {
+  display: block;
   width: 670px;
+  height: 14em;
   margin-bottom: 1em;
-  padding-bottom: 11em;
   border-bottom: 0.05em solid #C0C0C0;
   text-decoration: none;
   font-family: 'Raleway', Helvetica, Arial, Verdana, sans-serif;
@@ -618,32 +619,23 @@ img{
   text-decoration: underline;
 }
 
-.article:hover .read_more:before,
-.spotlight_article:hover .read_more:before {
-  content: "";
-  position: absolute;
-  z-index: -10;
-  border-width: 2em;
-  bottom: 50%;
-  right: 0;
-  width: 100%;
-  border-style: solid;
-  border-color: rgba(0, 153, 255, 1) transparent;
-  overflow: hidden;
+.article:hover .next,
+.spotlight_article:hover .next,
+.spotlight_article_green:hover .next,
+.spotlight_article_yellow:hover .next,
+.spotlight_article_red:hover .next {
+  background: rgba(0, 153, 255, 1);
+  border: 2px solid transparent;
+  padding: 6px 34px 6px 14px !important;
 }
 
-.article:hover .read_more:after,
-.spotlight_article:hover .read_more:after {
-  content: "";
-  position: absolute;
-  z-index: -10;
-  border-width: 2em;
-  bottom: 50%;
-  right: 0;
-  width: 100%;
-  border-style: solid;
-  border-color: rgba(0, 153, 255, 1) transparent;
-  overflow: hidden;
+.article:hover .next:after,
+.spotlight_article:hover .next:after,
+.spotlight_article_green:hover .next:after,
+.spotlight_article_yellow:hover .next:after,
+.spotlight_article_red:hover .next:after {
+  opacity: 1;
+  margin-left: 0;
 }
 
 .article a {
@@ -663,6 +655,7 @@ img{
 }
 
 .article_description {
+  text-align: center;
   display: block;
   float: left;
   width: 370px;
@@ -673,7 +666,7 @@ img{
   display: block;
   padding-left: 20px;
   width: 350px;
-  height: 175px;
+  height: 135px;
   text-align: justify;
   font-family: Arial, Helvetica, Verdana, sans-serif;
   font-weight: bold;
@@ -682,67 +675,53 @@ img{
   color: #4A4A4A;
 }
 
-.read_more {
+.next {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 6px 20px;
+  line-height: 1.7em;
+  background: #cd1126;
+  border: 2px solid;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   position: relative;
-  margin: auto;
-  color: white;
+  color: #fff !important;
   font-family: 'Raleway', Helvetica, Arial, Verdana, sans-serif;
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
-  font-size: 1em;
-  height: 1.2em;
-  width: 7.1em;
-  overflow: hidden;
 }
 
-.read_more a {
-  display: block;
-  color: white;
-  padding-left: 0.7em;
-  -moz--margin-before: 0;
-  -webkit-margin-before: 0;
-  -ms--margin-before: 0;
-  -o--margin-before: 0;
-  -moz--margin-after: 0;
-  -webkit-margin-after: 0;
-  -ms--margin-after: 0;
-  -o--margin-after: 0;
+.next a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.read_more:before {
-  content: "";
+.next:after {
+  font-size: 32px;
+  line-height: 1em;
+  content:"\f105";
+  opacity: 0;
   position: absolute;
-  z-index: -10;
-  border-width: 2em;
-  top: 50%;
-  right: 0;
-  width: 100%;
-  border-style: solid;
-  border-color: rgba(205, 17, 38,1) transparent;
-  overflow: hidden;
-  -webkit-transition: border-color 1s ease;
-  -moz-transition: border-color 1s ease;
-  -o-transition: border-color 1s ease;
-  -ms-transition: border-color 1s ease;
-  transition: border-color 1s ease;
-}
-
-.read_more:after {
-  content: "";
-  position: absolute;
-  z-index: -10;
-  border-width: 2em;
-  bottom: 50%;
-  right: 0;
-  width: 100%;
-  border-style: solid;
-  border-color: rgba(205, 17, 38, 1) transparent;
-  overflow: hidden;
-  -webkit-transition: border-color 1s ease;
-  -moz-transition: border-color 1s ease;
-  -o-transition: border-color 1s ease;
-  -ms-transition: border-color 1s ease;
-  transition: border-color 1s ease;
+  margin-left: -20px;
+  -moz-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  top: 7px; right: 5px;
+  font-family: 'FontAwesome';
+  speak: none; font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .article_tag {
@@ -1210,7 +1189,7 @@ fieldset {
     font-size: 1.2em;
   }
 
-  .read_more {
+  .next {
     display: none;
   }
 }
