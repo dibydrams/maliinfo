@@ -143,7 +143,7 @@
     </div>
   <% end %>
 
-  <% @otherposts.each do |post| %>
+  <% @whiteposts.each do |post| %>
     <div class="spotlight_article">
       <div class="focus_effect"></div>
 
@@ -170,43 +170,67 @@
 </section>
 
 
+<section class="container">
+  <div class="bloc_article">
 
-<section class="bloc_article">
+  <ul>
+  <% @otherposts.each do |post| %>
+    <li>
+      <div class="article">
+        <div class"focus_effect">
+          <div class="article_title">
+            <h1>
+              <%= link_to post.title, post_path(post) %>
+            </h1>
+          </div>
+        </div>
 
-<ul>
-<% @posts.each do |post| %>
-  <li>
-    <div class="article">
-      <div class"focus_effect">
-        <div class="article_title">
-          <h1>
-            <%= link_to post.title, post_path(post) %>
-          </h1>
+        <div class="article_picture">
+          <%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 300, :height => 200, :crop => :fill), post_path(post) %>
+        </div>
+
+        <div class="article_description">
+          <div class="article_summary">
+            <%= link_to truncate(strip_tags(post.content), :length => 300), post_path(post) %>
+          </div>
+          <div class="next">
+            <%= link_to 'lire la suite', post_path(post) %>
+          </div>
         </div>
       </div>
+    </li>
+  <% end %>
+  </ul>
 
-      <div class="article_picture">
-        <%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 300, :height => 200, :crop => :fill), post_path(post) %>
-      </div>
-
-      <div class="article_description">
-        <div class="article_summary">
-          <%= link_to truncate(strip_tags(post.content), :length => 300), post_path(post) %>
-        </div>
-        <div class="next">
-          <%= link_to 'lire la suite', post_path(post) %>
-        </div>
-      </div>
+  <% if user_signed_in? %>
+    <div class="create_post_button">
+      <%= link_to "Nouveau", new_post_path %>
     </div>
-  </li>
-<% end %>
-</ul>
+  <% end %>
 
-<% if user_signed_in? %>
-  <div class="create_post_button">
-    <%= link_to "Nouveau", new_post_path %>
   </div>
-<% end %>
 
-
+  <aside_inshort>
+  <div class="inshort">
+        <div class="inshort_title">
+          <h2>En bref...</h2>
+        </div>
+        <div class="inshort_content">
+          <ul>
+            <% @inshortposts.each do |post| %>
+              <li>
+                <div class="inshort_article">
+                  <div class="inshort_article_title">
+                    <%= link_to truncate(post.title, length: 90, separator: ' '), post_path(post) %>
+                    <div class="inshort_article_date">
+                      <%= link_to post.published_at.strftime("%d/%m/%Y"), post_path(post) %>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+    </div>
+  </aside_inshort>
 </section>

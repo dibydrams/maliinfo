@@ -12,12 +12,13 @@ class PostsController < ApplicationController
           format.rss { render :layout => false }
 
     @slides = Post.slideshow.limit(5).order("published_at DESC")
-    # @whitepost = Post.highlight.limit(1)
     @firstpost = Post.highlight.limit(1).offset(0).order("published_at DESC")
     @greenpost = Post.highlight.limit(1).offset(1).order("published_at DESC")
     @yellowpost = Post.highlight.limit(1).offset(2).order("published_at DESC")
     @redpost = Post.highlight.limit(1).offset(3).order("published_at DESC")
-    @otherposts = Post.news.limit(6).order("published_at DESC")
+    @whiteposts = Post.news.limit(6).offset(0).order("published_at DESC")
+    @otherposts = Post.news.limit(6).offset(5).order("published_at DESC")
+    @inshortposts = Post.downplay.limit(10).order("published_at DESC")
     end
   end
 

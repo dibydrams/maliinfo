@@ -12,5 +12,6 @@ class Post < ActiveRecord::Base
   scope :slideshow, -> {where(carousel: true)}
   scope :highlight, -> {where(spotlight: true)}
   scope :downplay, -> {where(inshort: true)}
-  scope :news, -> {where(inshort: false, spotlight: false)}
+  scope :news, -> {where(spotlight: false)}
+  scope :normal, -> {where(inshort: false)}
 end
