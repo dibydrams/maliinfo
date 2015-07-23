@@ -164,23 +164,7 @@
 	font-style: normal;
 	font-size: 1.3em;
 	background: #00812b;
-	-moz-box-shadow: 0 3.5em 2.5em -2.5em #2fab58 inset;
-	-webkit-box-shadow: 0 3.5em 2.5em -2.5em #2fab58 inset;
-	-ms-box-shadow: 0 3.5em 2.5em -2.5em #2fab58 inset;
-	-o-box-shadow: 0 3.5em 2.5em -2.5em #2fab58 inset;
-	box-shadow: 0 3.5em 2.5em -2.5em #2fab58 inset;
-	transition:background 1s ease, box-shadow 1s ease, color 1s ease;
 	z-index: -20;
-}
-
-.spotlight_article_green:hover,
-.spotlight_article_green:focus {
-	background: #2fab58;
-	-moz-box-shadow: 0 3.5em 2.5em -2.5em #00812b inset;
-	-webkit-box-shadow: 0 3.5em 2.5em -2.5em #00812b inset;
-	-ms-box-shadow: 0 3.5em 2.5em -2.5em #00812b inset;
-	-o-box-shadow: 0 3.5em 2.5em -2.5em #00812b inset;
-	box-shadow: 0 3.5em 2.5em -2.5em #00812b inset;
 }
 
 .spotlight_article_green a {
@@ -326,29 +310,13 @@
 	font-weight: bold;
 	font-style: normal;
 	font-size: 1.3em;
-	background: #d7ac00;
-	-moz-box-shadow: 0 4.5em 2.5em -2.5em #ffd52f inset;
-	-webkit-box-shadow: 0 4.5em 2.5em -2.5em #ffd52f inset;
-	-ms-box-shadow: 0 4.5em 2.5em -2.5em #ffd52f inset;
-	-o-box-shadow: 0 4.5em 2.5em -2.5em #ffd52f inset;
-	box-shadow: 0 4.5em 2.5em -2.5em #ffd52f inset;
-	transition:background 1s ease, box-shadow 1s ease, color 1s ease;
+	background: rgba(215, 172, 0, 1);
 	z-index: -20;
-}
-
-.spotlight_article_yellow:hover,
-.spotlight_article_yellow:focus {
-	background: #ffd52f;
-	-moz-box-shadow: 0 4.5em 2.5em -2.5em #d7ac00 inset;
-	-webkit-box-shadow: 0 4.5em 2.5em -2.5em #d7ac00 inset;
-	-ms-box-shadow: 0 4.5em 2.5em -2.5em #d7ac00 inset;
-	-o-box-shadow: 0 4.5em 2.5em -2.5em #d7ac00 inset;
-	box-shadow: 0 4.5em 2.5em -2.5em #d7ac00 inset;
 }
 
 .spotlight_article_yellow a {
 	text-decoration: none;
-	color: #4A4A4A;
+	color: white;
 }
 
 .spotlight_article_yellow p {
@@ -435,7 +403,7 @@
 .spotlight_article_yellow_title {
 	margin-top: -87px;
 	display: block;
-	text-shadow: 1px 1px 1px white;
+	text-shadow: 1px 1px 1px black;
 }
 
 .spotlight_article_yellow_title h1 {
@@ -469,7 +437,7 @@
 	font-weight: bold;
 	font-style: normal;
 	font-size: 0.7em;
-	text-shadow: 1px 1px 1px white;
+	text-shadow: 1px 1px 1px black;
 }
 
 /******* Article rouge *******/
@@ -490,23 +458,7 @@
 	font-style: normal;
 	font-size: 1.3em;
 	background: #ac0e20;
-	-moz-box-shadow: 0 3.5em 2.5em -2.5em #d63c4e inset;
-	-webkit-box-shadow: 0 3.5em 2.5em -2.5em #d63c4e inset;
-	-ms-box-shadow: 0 3.5em 2.5em -2.5em #d63c4e inset;
-	-o-box-shadow: 0 3.5em 2.5em -2.5em #d63c4e inset;
-	box-shadow: 0 3.5em 2.5em -2.5em #d63c4e inset;
-	transition:background 1s ease, box-shadow 1s ease, color 1s ease;
 	z-index: -20;
-}
-
-.spotlight_article_red:hover,
-.spotlight_article_red:focus {
-	background: #d63c4e;
-	-moz-box-shadow: 0 3.5em 2.5em -2.5em #ac0e20 inset;
-	-webkit-box-shadow: 0 3.5em 2.5em -2.5em #ac0e20 inset;
-	-ms-box-shadow: 0 3.5em 2.5em -2.5em #ac0e20 inset;
-	-o-box-shadow: 0 3.5em 2.5em -2.5em #ac0e20 inset;
-	box-shadow: 0 3.5em 2.5em -2.5em #ac0e20 inset;
 }
 
 .spotlight_article_red a {

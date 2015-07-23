@@ -269,12 +269,28 @@ img{
   z-index: 100;
 }
 
+@media (max-width: 1274px) {
+  .social_icons {
+  display: none;
+  }
+}
+
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 3.1em;
+}
+
+@media (max-width: 722px) {
+  .container {
+  width: 350px;
+  }
+  .spotlight_article,
+  .spotlight_article_green,
+  .spotlight_article_yellow,
+  .spotlight_article_red {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -285,13 +301,13 @@ img{
 
 @media (min-width: 992px) {
   .container {
-  width: 970px;
+  width: 760px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1053px) {
   .container {
-  width: 1170px;
+  width: 1115px;
   }
 }
 
@@ -306,6 +322,19 @@ img{
   height: 2em;
   width: 9.5em;
   overflow: hidden;
+}
+
+@media (max-width: 1078px) {
+  .tag_list {
+    display: none;
+  }
+  .spotlight_article,
+  .spotlight_article_green,
+  .spotlight_article_yellow,
+  .spotlight_article_red {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
 }
 
 .tag_intro p {
@@ -625,8 +654,15 @@ img{
 .spotlight_article_yellow:hover .next,
 .spotlight_article_red:hover .next {
   background: rgba(0, 153, 255, 1);
-  border: 2px solid transparent;
   padding: 6px 34px 6px 14px !important;
+}
+
+.spotlight_article_green:hover .next_spotlight,
+.spotlight_article_yellow:hover .next_spotlight,
+.spotlight_article_red:hover .next_spotlight {
+  background: rgba(255, 255, 255, .2) !important;;
+  padding: 6px 34px 6px 14px !important;
+  border: 2px solid transparent;
 }
 
 .article:hover .next:after,
@@ -658,13 +694,13 @@ img{
   text-align: center;
   display: block;
   float: left;
-  width: 370px;
+  width: 350px;
   height: 200px;
+  padding-left: 20px;
 }
 
 .article_summary {
   display: block;
-  padding-left: 20px;
   width: 350px;
   height: 135px;
   text-align: justify;
@@ -685,7 +721,6 @@ img{
   padding: 6px 20px;
   line-height: 1.7em;
   background: #cd1126;
-  border: 2px solid;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-transition: all 0.5s;
@@ -701,6 +736,12 @@ img{
 .next a {
   color: inherit;
   text-decoration: none;
+}
+
+.next_spotlight {
+  border: 2px solid white;
+  background: transparent !important;
+  text-shadow: 1px 1px 1px #4A4A4A;
 }
 
 .next:after {
@@ -1155,11 +1196,10 @@ fieldset {
   }
 
   .article {
-    width: 100%;
+    width: 96%;
+    height: 160px;
     margin-bottom: 1em;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: 6.5em;
+    padding: 0 2%;
     font-size: 1em;
   }
 
@@ -1168,8 +1208,9 @@ fieldset {
   }
 
   .article_description {
-    width: 170px;
+    width: 150px;
     height: 100px;
+    padding-left: 20px;
     font-size: 0.5em;
   }
 
@@ -1183,7 +1224,6 @@ fieldset {
     }
 
   .article_summary {
-    padding-left: 20px;
     width: 200px;
     height: 100px;
     font-size: 1.2em;

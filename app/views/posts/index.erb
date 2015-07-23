@@ -31,7 +31,7 @@
   </div>
 </section>
 
-<section>
+<section class="container">
   <div id="container_carrousel" class="shadow">
     <ul class="carrousel">
       <% @slides.each do |post| %>
@@ -86,7 +86,7 @@
         <div class="spotlight_article_green_summary">
           <%= link_to sanitize(post.content.truncate(200, separator: ' ')), post_path(post) %>
         </div>
-        <div class="next">
+        <div class="next next_spotlight">
           <%= link_to 'lire la suite', post_path(post) %>
         </div>
       </div>
@@ -111,7 +111,7 @@
         <div class="spotlight_article_yellow_summary">
           <%= link_to sanitize(post.content.truncate(200, separator: ' ')), post_path(post) %>
         </div>
-        <div class="next">
+        <div class="next next_spotlight">
           <%= link_to 'lire la suite', post_path(post) %>
         </div>
       </div>
@@ -136,7 +136,7 @@
         <div class="spotlight_article_red_summary">
           <%= link_to sanitize(post.content.truncate(200, separator: ' ')), post_path(post) %>
         </div>
-        <div class="next">
+        <div class="next next_spotlight">
           <%= link_to 'lire la suite', post_path(post) %>
         </div>
       </div>
@@ -191,7 +191,7 @@
 
       <div class="article_description">
         <div class="article_summary">
-          <%= link_to sanitize(post.content.truncate(350, separator: ' ')), post_path(post) %>
+          <%= link_to truncate(strip_tags(post.content), :length => 300), post_path(post) %>
         </div>
         <div class="next">
           <%= link_to 'lire la suite', post_path(post) %>
