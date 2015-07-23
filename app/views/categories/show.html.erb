@@ -1,4 +1,6 @@
-<section class="bloc_article">
+<section class="container">
+
+<div class="bloc_article">
 
 <div class="digg_pagination">
   <%= will_paginate @posts, :container => false, :previous_label => "Précédent", :next_label => "Suivant" %>
@@ -22,7 +24,7 @@
         <div class="article_summary">
           <%= link_to sanitize(post.content.truncate(350, separator: ' ')), post_path(post) %>
         </div>
-        <div class="read_more">
+        <div class="next">
           <%= link_to 'lire la suite...', post_path(post) %>
         </div>
       </div>
@@ -39,7 +41,7 @@
 <%= link_to "Nouveau", new_post_path %>
 </div>
 
-</section>
+</div>
 
 <aside>
   <div class="news">
@@ -64,5 +66,7 @@
       </div>
   </div>
 </aside>
+
+</section>
 
 
