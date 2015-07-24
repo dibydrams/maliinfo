@@ -1,4 +1,5 @@
 <% content_for :head do %>
+  <link rel="alternate" type="application/rss+xml" href='<%= "http://maliinfo.herokuapp.com" + posts_path(format: 'rss') %>' title="Mali Info">
   <meta property="og:url" content="http://mali-info.net"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Mali Info" />
