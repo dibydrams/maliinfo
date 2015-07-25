@@ -39,19 +39,37 @@
   <a href="http://www.linkedin.com/shareArticle?mini=true&url=<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>&title=&summary=" target="_blank" class="icon2 icon2-lk">LinkedIn</a>
 </div>
 
-<div class="create_post_button">
-<%= link_to "Retour", :back %>
-</div>
-
 <% if user_signed_in? %>
-  <div class="create_post_button">
+  <div class="create_post_button button_fixed">
+  <%= link_to "Retour", :back %>
+  </div>
+
+  <div class="create_post_button button_fixed button_fixed2">
   <%= link_to "Éditer", edit_post_path %>
   </div>
 
-  <div class="create_post_button">
+  <div class="create_post_button button_fixed button_fixed3">
   <%= link_to "Nouveau", new_post_path %>
   </div>
 <% end %>
+
+<div class="news_title">
+  <h2>Commentaires</h2>
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'maliinfo';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
 </section>
 
 <aside>

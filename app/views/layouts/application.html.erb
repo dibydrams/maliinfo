@@ -12,46 +12,58 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= content_for?(:head) ? yield(:head) : '' %>
+  <!--[if !IE 7]>
+    <style type="text/css">
+      #wrap {display:table;height:100%}
+    </style>
+  <![endif]-->
 </head>
 
 <body>
+  <div id="wrap">
+    <div id="main" class="clearfix">
+      <nav class="menu">
+            <% unless @category %><li class='menu-selected'><a href="/">Accueil</a></li><% else %><li><a href="/">Accueil</a></li><% end %><% Category.all.each do |category| %><% if @category && @category.id == category.id %><li class='menu-selected'><%= link_to category.name, category_path(category) %></li><% else %><li><%= link_to category.name, category_path(category) %></li><% end %><% end %><li class="contact"><a href="/">Contact</a></li>
+      </nav>
 
-  <nav class="menu">
-        <% unless @category %><li class='menu-selected'><a href="/">Accueil</a></li><% else %><li><a href="/">Accueil</a></li><% end %><% Category.all.each do |category| %><% if @category && @category.id == category.id %><li class='menu-selected'><%= link_to category.name, category_path(category) %></li><% else %><li><%= link_to category.name, category_path(category) %></li><% end %><% end %><li class="contact"><a href="/">Contact</a></li>
-  </nav>
+      <div>
+        <section>
+          <div class="social_icons icon-effect">
+            <a href="https://www.facebook.com/maliinfo" target="_blank" class="icon icon-fb">Facebook</a>
+            <div class="clear"></div>
+            <a href="https://www.youtube.com/user/InfoMali" target="_blank" class="icon icon-yt">YouTube</a>
+            <div class="clear"></div>
+            <a href="https://twitter.com/maliinfo" target="_blank" class="icon icon-tw">Twitter</a>
+            <div class="clear"></div>
+            <a href="<%= posts_path(format: 'rss') %>" target="_blank" class="icon icon-rss">Flux RSS</a>
+          </div>
+        </section>
 
-  <div>
-    <section>
-      <div class="social_icons icon-effect">
-        <a href="https://www.facebook.com/maliinfo" target="_blank" class="icon icon-fb">Facebook</a>
-        <div class="clear"></div>
-        <a href="https://www.youtube.com/user/InfoMali" target="_blank" class="icon icon-yt">YouTube</a>
-        <div class="clear"></div>
-        <a href="https://twitter.com/maliinfo" target="_blank" class="icon icon-tw">Twitter</a>
-        <div class="clear"></div>
-        <a href="<%= posts_path(format: 'rss') %>" target="_blank" class="icon icon-rss">Flux RSS</a>
+        <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+          <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
+
+        <%= yield %>
+
+        <!-- <section class="container bubblingG">
+          <span id="bubblingG_1">
+          </span>
+          <span id="bubblingG_2">
+          </span>
+          <span id="bubblingG_3">
+          </span>
+        </section> -->
       </div>
-    </section>
-
-      <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
-      <% end %>
-      <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
-      <% end %>
-
-      <%= yield %>
-
-    <!-- <section class="container bubblingG">
-      <span id="bubblingG_1">
-      </span>
-      <span id="bubblingG_2">
-      </span>
-      <span id="bubblingG_3">
-      </span>
-    </section> -->
+    </div>
   </div>
 
+  <footer>
+    <div class="footer_inner">
+    </div>
+  </footer>
 </body>
 
 </html>
