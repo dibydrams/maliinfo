@@ -164,7 +164,7 @@
 	font-style: normal;
 	font-size: 1.3em;
 	background: #00812b;
-	z-index: -20;
+	z-index: 0;
 }
 
 .spotlight_article_green a {
@@ -311,7 +311,7 @@
 	font-style: normal;
 	font-size: 1.3em;
 	background: rgba(215, 172, 0, 1);
-	z-index: -20;
+	z-index: 0;
 }
 
 .spotlight_article_yellow a {
@@ -346,7 +346,7 @@
 	position: absolute;
 	width: 88px;
 	height: 2px;
-	background: #4A4A4A;
+	background: white;
 	content: '';
 	opacity: 0;
 	-webkit-transition: all 0.8s;
@@ -458,7 +458,7 @@
 	font-style: normal;
 	font-size: 1.3em;
 	background: #ac0e20;
-	z-index: -20;
+	z-index: 0;
 }
 
 .spotlight_article_red a {
