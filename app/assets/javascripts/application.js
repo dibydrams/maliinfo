@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require froala_editor.min.js
 //= require responsivecarrousel.min.js
+//= require google_analytics.js.coffee
 
 var ready;
 ready = function() {
