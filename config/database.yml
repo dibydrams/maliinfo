@@ -14,5 +14,6 @@ test: &test
   database: maliinfo_test
 
 production:
+  adapter: postgresql
   url: <%= ENV['APPSDECK_POSTGRESQL_URL'] %>
 
