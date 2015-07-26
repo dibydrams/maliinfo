@@ -5,6 +5,14 @@
 
 <div class="contact_form">
 
+<div class="inshort_title">
+  <h2>Formulaire de contact</h2>
+</div>
+
+<div class="contact_intro">
+  <p>Vous souhaitez nous contacter pour devenir un contributeur du site, nous faire part de vos remarques, bénéficier d'espace publicitaire, nous vous invitons à remplir le formulaire ci-dessous :</p>
+</div>
+
 <%= form_for @message, url: contact_path do |message_form| %>
   <fieldset>
     <div class="field">
@@ -23,12 +31,9 @@
       <%= message_form.text_area :content, placeholder: "Message"%>
     </div>
   </fieldset>
-  
-  <fieldset>
-    <div class="field">
-      <%= message_form.submit "Envoyer" %>
-    </div>
-  </fieldset>
+
+  <%= message_form.submit "Envoyer" %>
+
 <% end %>
 
 </div>

@@ -121,13 +121,13 @@ body {
 #wrap {min-height: 100%;}
 
 #main {overflow:auto;
-  padding-bottom: 50px;}  /* must be same height as the footer */
+  padding-bottom: 50px;} /* must be same height as the footer */
 
 footer {position: relative;
   margin-top: -50px; /* negative value of footer height */
   height: 50px;
   clear:both;
-  background-color: #009933;
+  background-color: #756969;
 }
 
 /*Opera Fix footer*/
@@ -1058,6 +1058,11 @@ aside_inshort {
   margin: auto;
 }
 
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
 .form label {
   line-height: 2em;
   font-family: 'Raleway', Helvetica, Arial, Verdana, sans-serif;
@@ -1066,17 +1071,27 @@ aside_inshort {
   font-size: 1em;
 }
 
-.field input {
+.field input, .field textarea {
   background-color: rgba(196, 231, 182, 1);
   border: 0px solid rgba(255, 255, 255, 1);
   margin: 0px 0 5px;
   border-radius: 2px;
-  padding: 5px;
+  padding: 1%;
   font-family: 'Raleway', Helvetica, Arial, Verdana, sans-serif;
+  width: 98%;
 }
 
-input:focus {
-    outline-color: #75d948;
+.field input#message_name {
+  margin-top: 5px;
+}
+
+.field textarea {
+  resize:none;
+  height: 130px;
+}
+
+input:focus, textarea:focus {
+  outline-color: #75d948;
   outline-style: auto;
   outline-width: 5px;
 }
@@ -1269,17 +1284,51 @@ label[for=post_category_ids_7] {
   display: block;
   width: 75%;
   max-width: 960px;
-  margin: auto;
+  margin: 40px auto;
 }
 
-.contact_form_picture img {
-  display: block;
+.contact_form_picture {
+  float: left;
   width: 50%;
+  height: 530px;
+  background-image: url('http://res.cloudinary.com/hd2c0qxh2/image/upload/v1437868851/bamako-mali-info.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 5px;
+  margin-right: 15px;
 }
 
 .contact_form {
-  display: block;
-  width: 50%;
+  float: left;
+  width: 364px;
+  margin-top: 15px;
+}
+
+.contact_intro {
+  margin: 10px 0;
+  font-family: 'Raleway';
+  font-size: 18px;
+  text-align: justify;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #64b743;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #64b743;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #64b743;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #64b743;
+}
+
+.contact_form input[type="submit"] {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /*** FORMULAIRE LOGIN ***/
@@ -1353,6 +1402,14 @@ fieldset {
 
 .alert-danger:hover {
   background: rgba(205, 17, 38, .3);
+}
+
+/*** FOOTER ***/
+.footer_inner {
+  line-height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'Raleway';
 }
 
 /*===============================================================================================================================FORMAT SMARTPHONE PORTRAIT========  MAX-WIDTH: 320PX  =============*/
