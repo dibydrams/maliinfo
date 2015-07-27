@@ -222,7 +222,9 @@
               <li>
                 <div class="inshort_article">
                   <div class="inshort_article_title">
+                    <div class="inshort_att">
                     <%= link_to truncate(post.title, length: 90, separator: ' '), post_path(post) %>
+                    </div>
                     <div class="inshort_article_date">
                       <%= link_to post.published_at.strftime("%d/%m/%Y"), post_path(post) %>
                     </div>

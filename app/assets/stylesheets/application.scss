@@ -337,6 +337,9 @@ img{
   .container {
   width: 1115px;
   }
+  .container_page {
+  width: 1000px;
+  }
 }
 
 .tag_intro {
@@ -935,10 +938,6 @@ aside_inshort {
   margin-top: 1em;
 }
 
-.inshort_content:hover .inshort_article a {
-  color: #A0A0A0;
-}
-
 .inshort_article {
   margin-top: .5em;
   padding-bottom: .7em;
@@ -957,10 +956,6 @@ aside_inshort {
   transition: all 0.5s ease;
 }
 
-.inshort_content:hover .inshort_article a:hover {
-  color: black;
-}
-
 .inshort_article_title {
   display: block;
   float: left;
@@ -971,16 +966,16 @@ aside_inshort {
   width: 384px;
 }
 
+.inshort_att a:hover {
+  text-decoration: underline;
+}
+
 .inshort_article_date {
   font-family: Verdana, Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: .75em;
   padding-top: .2em;
-}
-
-.inshort_article:hover .inshort_article a {
-  color: #A0A0A0;
 }
 
 /*** PAGE ARTICLE ***/
@@ -991,6 +986,10 @@ aside_inshort {
   margin-left: 14%;
   margin-right: 3em;
   float: left;
+}
+
+.content_show p {
+  margin-bottom: 15px;
 }
 
 /*** BOUTON ***/
