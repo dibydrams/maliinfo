@@ -37,7 +37,12 @@
     <ul class="carrousel">
       <% @slides.each do |post| %>
         <li>
+        <div class="boxgrid captionfull">
           <%= link_to cl_image_tag(post.picture_url(:standard), :width => 630, :height => 420, :crop => :fill), post_path(post) %>
+          <div class="cover boxcaption">
+            <%= link_to truncate(post.title, length: 90, separator: ' '), post_path(post) %>
+          </div>
+        </div>
         </li>
       <% end %>
     </ul>
