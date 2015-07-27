@@ -32,9 +32,9 @@ ready = function() {
   //   $(this).addClass("selected");
   // });
   $('.boxgrid.captionfull').hover(function(){
-        $(".cover", this).stop().animate({top:'350px',opacity:'1'},{queue:false,duration:500});
+    $(".cover", this).stop().animate({top:'350px',opacity:'1'},{queue:false,duration:500});
   }, function() {
-        $(".cover", this).stop().animate({top:'420px',opacity:'0'},{queue:false,duration:500});
+    $(".cover", this).stop().animate({top:'420px',opacity:'0'},{queue:false,duration:500});
   });
 
 };

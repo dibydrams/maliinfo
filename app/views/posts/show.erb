@@ -40,16 +40,16 @@
 </div>
 
 <% if user_signed_in? %>
-  <div class="create_post_button button_fixed">
-  <%= link_to "Retour", :back %>
+  <div class="create_post_button button_fixed button_fixed3">
+  <%= link_to "Nouveau", new_post_path %>
   </div>
 
   <div class="create_post_button button_fixed button_fixed2">
-  <%= link_to "Éditer", edit_post_path %>
+  <%= link_to "Modifier", edit_post_path %>
   </div>
 
-  <div class="create_post_button button_fixed button_fixed3">
-  <%= link_to "Nouveau", new_post_path %>
+  <div class="create_post_button button_fixed">
+  <%= link_to "Retour", :back %>
   </div>
 <% end %>
 
