@@ -5,7 +5,7 @@
   <br><br>
   <%= f.label :published_at, "Publié le" %>
   <br>
-  <%= f.date_field(:published_at) %>
+  <%= f.datetime_select(:published_at, order: [:day, :month, :year], date_separator: ' / ', time_separator: ' : ', datetime_separator: ' à ') %>
   <br><br>
   <%= f.label :content, "Texte" %>
   <br>
