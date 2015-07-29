@@ -874,6 +874,12 @@ img{
   margin: 20px 0;
 }
 
+@media (max-width: 1053px) {
+  .ads img {
+  width: 100%;
+  }
+}
+
 /*** NEWS ***/
 
 aside {
