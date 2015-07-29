@@ -1028,17 +1028,62 @@ aside_inshort {
 }
 
 /*** PAGE ARTICLE ***/
+.show_container {
+  width: 934px;
+}
 
 .show_article {
   display: block;
   width: 630px;
-  margin-left: 14%;
   margin-right: 3em;
   float: left;
 }
 
 .content_show p {
   margin-bottom: 15px;
+}
+
+@media (max-width: 1015px) {
+  .show_container {
+    width: 630px;
+  }
+  .show_article {
+    width: 630px;
+    margin-right: 0;
+  }
+  #post_show_news {
+  display: none;
+  }
+}
+
+@media (max-width: 655px) {
+  .show_container {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .show_article {
+    width: 100%;
+    margin-right: 0;
+  }
+  .show_article > .article_page {
+    width: 100%;
+  }
+  .show_article > .article_page > .article_page_title,
+  .show_article > .article_page > .article_content, {
+    width: 100%;
+  }
+  .show_article > .article_page > .article_page_picture,
+  .show_article > .article_page > .article_page_picture img {
+    max-width: 100%;
+    height: auto;
+  }
+  .show_article > .article_page > .article_content {
+    padding-top: 0;
+  }
+  #page_news {
+  display: none;
+  }
 }
 
 /*** BOUTON ***/

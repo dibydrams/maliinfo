@@ -408,3 +408,9 @@
   transform: scale(1);
   opacity: 1;
 }
+
+@media (max-width: 655px) {
+  .icon2 {
+    margin: 15px 15px;
+  }
+}

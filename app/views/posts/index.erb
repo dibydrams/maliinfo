@@ -54,7 +54,7 @@
 
       <div class="spotlight_article_title">
         <h1>
-          <%= link_to truncate(post.title, length: 90, separator: ' '), post_path(post) %>
+          <%= link_to truncate(post.title, length: 85, separator: ' '), post_path(post) %>
         </h1>
       </div>
 
@@ -80,7 +80,7 @@
 
       <div class="spotlight_article_green_title">
         <h1>
-          <%= link_to truncate(post.title, length: 90, separator: ' '), post_path(post) %>
+          <%= link_to truncate(post.title, length: 85, separator: ' '), post_path(post) %>
         </h1>
       </div>
 
@@ -105,7 +105,7 @@
 
       <div class="spotlight_article_yellow_title">
         <h1>
-          <%= link_to truncate(post.title, length: 90, separator: ' '), post_path(post) %>
+          <%= link_to truncate(post.title, length: 85, separator: ' '), post_path(post) %>
         </h1>
       </div>
 
@@ -130,7 +130,7 @@
 
       <div class="spotlight_article_red_title">
         <h1>
-          <%= link_to truncate(post.title, length: 90, separator: ' '), post_path(post) %>
+          <%= link_to truncate(post.title, length: 85, separator: ' '), post_path(post) %>
         </h1>
       </div>
 
@@ -150,7 +150,7 @@
   <% end %>
 
   <div class="ads">
-    <%= link_to 'https://www.iebconsulting.com', :target => "_blank" do %>
+    <%= link_to 'http://www.iebconsulting.com', :target => "_blank" do %>
       <%= cl_image_tag("banniere-iebc.png") %>
     <% end %>
   </div>
@@ -161,7 +161,7 @@
 
       <div class="spotlight_article_title">
         <h1>
-          <%= link_to truncate(post.title, length: 90, separator: ' '), post_path(post) %>
+          <%= link_to truncate(post.title, length: 85, separator: ' '), post_path(post) %>
         </h1>
       </div>
 
@@ -234,7 +234,7 @@
                 <div class="inshort_article">
                   <div class="inshort_article_title">
                     <div class="inshort_att">
-                    <%= link_to truncate(post.title, length: 90, separator: ' '), post_path(post) %>
+                    <%= link_to truncate(post.title, length: 85, separator: ' '), post_path(post) %>
                     </div>
                     <div class="inshort_article_date">
                       <%= link_to post.published_at.strftime("%d/%m/%Y"), post_path(post) %>

@@ -1,5 +1,5 @@
 <% content_for :head do %>
-  <meta prefix="og: http://ogp.me/ns#" property="og:url" content="<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>"/>
+  <meta prefix="og: http://ogp.me/ns#" property="og:url" content="<%= "http://mali-info.net" + post_path(@post) %>"/>
   <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website"/>
   <meta prefix="og: http://ogp.me/ns#" property="og:title" content="<%=@post.title%> | Mali Info" />
   <meta prefix="og: http://ogp.me/ns#" property="og:image" content="<%=@post.picture_url(:standard)%>"/>
@@ -9,6 +9,7 @@
   <meta name="twitter:site" content="@MaliInfo" />
 <% end %>
 
+<section class="container show_container">
 <section class="show_article">
 <div class="article_page">
   <div class="article_page_title">
@@ -33,10 +34,10 @@
 </div>
 
 <div class="icon-effect2">
-  <a href='http://www.facebook.com/sharer.php?u=<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>' target="_blank" class="icon2 icon2-fb">Facebook</a>
-  <a href="http://twitter.com/home?status=<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>" target="_blank" class="icon2 icon2-tw">Twitter</a>
-  <a href='https://plus.google.com/share?url=<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>' target="_blank" class="icon2 icon2-gp">Google+</a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=<%= "http://maliinfo.herokuapp.com" + post_path(@post) %>&title=&summary=" target="_blank" class="icon2 icon2-lk">LinkedIn</a>
+  <a href='http://www.facebook.com/sharer.php?u=<%= "http://mali-info.net" + post_path(@post) %>' target="_blank" class="icon2 icon2-fb">Facebook</a>
+  <a href="http://twitter.com/home?status=<%= "http://mali-info.net" + post_path(@post) %>" target="_blank" class="icon2 icon2-tw">Twitter</a>
+  <a href='https://plus.google.com/share?url=<%= "http://mali-info.net" + post_path(@post) %>' target="_blank" class="icon2 icon2-gp">Google+</a>
+  <a href="http://www.linkedin.com/shareArticle?mini=true&url=<%= "http://mali-info.net" + post_path(@post) %>&title=&summary=" target="_blank" class="icon2 icon2-lk">LinkedIn</a>
 </div>
 
 <% if user_signed_in? %>
@@ -68,11 +69,11 @@
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<noscript>SVP activez javascript pour voir <a href="https://disqus.com/?ref_noscript" rel="nofollow">les commentaires.</a></noscript>
 
 </section>
 
-<aside>
+<aside id="post_show_news">
   <div class="news">
       <div class="news_title">
         <h2>Actualité</h2>
@@ -86,7 +87,7 @@
                   <%= link_to cl_image_tag(post.picture_url(:thumbnail), :width => 60, :height => 40, :crop => :fill), post_path(post) %>
                 </div>
                 <div class="news_article_title">
-                  <%= link_to truncate(post.title, length: 90, separator: ' '), post_path(post) %>
+                  <%= link_to truncate(post.title, length: 85, separator: ' '), post_path(post) %>
                   <div class="news_article_date">
                     <%= link_to post.published_at.strftime("%d/%m/%Y"), post_path(post) %>
                   </div>
@@ -98,3 +99,4 @@
       </div>
   </div>
 </aside>
+</div>
