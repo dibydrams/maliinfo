@@ -1,5 +1,8 @@
 <% content_for :head do %>
-  <link rel="alternate" type="application/rss+xml" href='<%= "http://maliinfo.herokuapp.com" + posts_path(format: 'rss') %>' title="Mali Info">
+  <link rel="alternate" type="application/rss+xml" href='<%= "http://www.mali-info.net" + posts_path(format: 'rss') %>' title="Mali Info">
+  <meta name="keywords" content="info, mali, actu, actualite, news, net, web"/>
+  <meta name="news_keywords" content="info, mali, actu, actualite, news, net, web">
+  <meta name="description" content="L'actualité malienne en continu"/>
   <meta property="og:url" content="http://mali-info.net"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Mali Info" />
@@ -223,28 +226,37 @@
   </div>
 
   <aside_inshort>
-  <div class="inshort">
-        <div class="inshort_title">
-          <h2>En bref...</h2>
-        </div>
-        <div class="inshort_content">
-          <ul>
-            <% @inshortposts.each do |post| %>
-              <li>
-                <div class="inshort_article">
-                  <div class="inshort_article_title">
-                    <div class="inshort_att">
-                    <%= link_to truncate(post.title, length: 85, separator: ' '), post_path(post) %>
-                    </div>
-                    <div class="inshort_article_date">
-                      <%= link_to post.published_at.strftime("%d/%m/%Y"), post_path(post) %>
-                    </div>
+    <div class="inshort">
+      <div class="inshort_title">
+        <h2>En bref...</h2>
+      </div>
+      <div class="inshort_content">
+        <ul>
+          <% @inshortposts.each do |post| %>
+            <li>
+              <div class="inshort_article">
+                <div class="inshort_article_title">
+                  <div class="inshort_att">
+                  <%= link_to truncate(post.title, length: 85, separator: ' '), post_path(post) %>
+                  </div>
+                  <div class="inshort_article_date">
+                    <%= link_to post.published_at.strftime("%d/%m/%Y"), post_path(post) %>
                   </div>
                 </div>
-              </li>
-            <% end %>
-          </ul>
-        </div>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="inshort">
+    <div class="inshort_title jump">
+        <h2>Publicité</h2>
+      </div>
+    <div class="advert">
+      <embed src="BT_300x600.swf" flashvars="" scale="exactfit" salign="LT" quality="high" wmode="opaque" width="300" height="600">
+    </div>
     </div>
   </aside_inshort>
 </section>
