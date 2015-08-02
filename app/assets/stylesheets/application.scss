@@ -1060,6 +1060,10 @@ aside_inshort {
   margin-bottom: 15px;
 }
 
+.content_show p:first-child {
+  font-weight: bold;
+}
+
 @media (max-width: 1015px) {
   .show_container {
     width: 630px;
