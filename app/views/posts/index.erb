@@ -14,7 +14,10 @@
 <% end %>
 
 <section>
-  <div class="menu_tag">
+  <div class="home_container">
+  </div>
+
+  <!-- <div class="menu_tag">
     <ul class="tag_list">
       <div class="tag_intro">
         <p>En ce moment...</p>
@@ -25,11 +28,10 @@
         </li>
       <% end %>
     </ul>
-  </div>
+  </div> -->
 
   <div class="marquee">
     <% @marquee.each do |post| %>
-      <p><%= link_to post.title, post_path(post) %></p>
       <p><%= link_to post.title, post_path(post) %></p>
     <% end %>
   </div>
@@ -153,8 +155,8 @@
   <% end %>
 
   <div class="ads">
-    <%= link_to 'http://www.iebconsulting.com', :target => "_blank" do %>
-      <%= cl_image_tag("banniere-iebc.png") %>
+    <%= link_to 'http://www.africa-solar.ml', :target => "_blank" do %>
+      <%= cl_image_tag("banniere-africa-solar-energy") %>
     <% end %>
   </div>
 
@@ -184,6 +186,11 @@
   <% end %>
 </section>
 
+<div class="ads ads2">
+  <%= link_to 'http://www.iebconsulting.com', :target => "_blank" do %>
+    <%= cl_image_tag("banniere-iebc.png") %>
+  <% end %>
+</div>
 
 <section class="container">
   <div class="bloc_article">
@@ -195,7 +202,7 @@
         <div class"focus_effect">
           <div class="article_title">
             <h1>
-              <%= link_to post.title, post_path(post) %>
+              <%= link_to truncate(post.title, length: 130, separator: ' '), post_path(post) %>
             </h1>
           </div>
         </div>
