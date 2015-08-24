@@ -26,10 +26,6 @@ class PostsController < ApplicationController
     @post = Post.new
     @post.published_at = Time.now
     @post.created_at = Time.now
-    @post.flash = false
-    @post.carousel = false
-    @post.spotlight = false
-    @post.inshort = false
   end
 
   def create

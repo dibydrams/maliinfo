@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150716123918) do
+ActiveRecord::Schema.define(version: 20150824082629) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,15 +22,6 @@ ActiveRecord::Schema.define(version: 20150716123918) do
   end
 
   add_index "categories", ["slug"], name: "index_categories_on_slug", unique: true, using: :btree
-
-  create_table "mercury_images", force: :cascade do |t|
-    t.string   "image_file_name",    limit: 255
-    t.string   "image_content_type", limit: 255
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "post_categories", force: :cascade do |t|
     t.integer "post_id"
@@ -44,11 +35,11 @@ ActiveRecord::Schema.define(version: 20150716123918) do
     t.datetime "published_at"
     t.datetime "updated_at"
     t.datetime "created_at"
-    t.boolean  "spotlight"
-    t.boolean  "inshort"
+    t.boolean  "spotlight",                default: false, null: false
+    t.boolean  "inshort",                  default: false, null: false
     t.string   "slug"
-    t.boolean  "carousel"
-    t.boolean  "flash"
+    t.boolean  "carousel",                 default: false, null: false
+    t.boolean  "flash",                    default: false, null: false
   end
 
   add_index "posts", ["slug"], name: "index_posts_on_slug", unique: true, using: :btree
