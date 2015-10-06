@@ -356,6 +356,15 @@ img{
   .container_page {
   width: 1000px;
   }
+  .md_sa {
+    display: none;
+  }
+}
+
+@media (max-width: 1053px) {
+  .lg_sa {
+    display: none;
+  }
 }
 
 .tag_intro {
