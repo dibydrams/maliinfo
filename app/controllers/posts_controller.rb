@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   
   def index
     @tags = Post.highlight.limit(4).order("published_at DESC")
-    @marquee = Post.flashinfo.limit(2).order("published_at DESC")
+    @marquee = Post.flashinfo.limit(5).order("published_at DESC")
     @posts = Post.all.order("published_at DESC")
 
     respond_to do |format|
