@@ -3,3 +3,5 @@
 /public/uploads/tmp
 /tmp
 .env
+.DS_Store
+Icon?
